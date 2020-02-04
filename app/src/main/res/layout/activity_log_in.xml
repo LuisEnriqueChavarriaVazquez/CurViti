@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_color"
+        android:layout_height="match_parent"
+        tools:context=".login_register.LogInActivity">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                    android:text="@string/app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblTitle"
+                    android:textSize="55sp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/ananda"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"/>
+
+            <TextView
+                    android:text="Correo electrónico:"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblEmail"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"/>
+            <EditText
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_white"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#808080"
+                    android:hint="introduce tu correo"
+                    android:drawableLeft="@drawable/user_icon"
+                    android:paddingLeft="10dp"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/txtEmail"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:text="Contraseña:"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblPassword"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center"/>
+            <EditText
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_white"
+                    android:inputType="textPassword"
+                    android:textColorHint="#808080"
+                    android:hint="introduce tu contraseña"
+                    android:drawableLeft="@drawable/password_icon"
+                    android:paddingLeft="10dp"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/txtPassword"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center"/>
+            <Button
+                    android:text="Iniciar sesión"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/btnLogin"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:background="@drawable/round_gradient_orange"
+                    android:layout_marginTop="16dp"
+                    android:onClick="logIn"
+                    android:layout_gravity="center"/>
+            <!--
+            <Button
+                    android:text="Entrar con Google"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/btnGoogleLogin"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@android:color/black"
+                    android:textAllCaps="false"
+                    android:drawableLeft="@drawable/google_icon"
+                    android:paddingLeft="10dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/round_gocol"
+                    android:layout_marginTop="44dp"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="center"/>
+            <Button
+                    android:text="Entrar con Facebook"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/btnFacebookLogin"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:drawableLeft="@drawable/facebook_icon"
+                    android:paddingLeft="10dp"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/round_blue"
+                    android:layout_marginTop="16dp"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="center"/>-->
+            <TextView
+                    android:id="@+id/lblSignIn"
+                    android:layout_width="254dp"
+                    android:layout_height="63dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:text="¿No estas registrado?,\n¡Regístrate ahora!"
+                    android:onClick="goToSignIn"
+                    android:layout_marginTop="10sp"
+                    android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

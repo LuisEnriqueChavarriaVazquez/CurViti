@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profile_icon"
+            app:civ_border_width="0.1dp"
+            app:civ_border_color="#FF000000"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="User name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtName"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintStart_toEndOf="@+id/imgProfile"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/imgProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="Last message in conversation..."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtMsj"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            android:textSize="14sp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtName"/>
+</android.support.constraint.ConstraintLayout>

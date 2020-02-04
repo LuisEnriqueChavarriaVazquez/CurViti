@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "476488437409",
+    "firebase_url": "https://instant-crush-d3302.firebaseio.com",
+    "project_id": "instant-crush-d3302",
+    "storage_bucket": "instant-crush-d3302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476488437409:android:f70ea07c29d7299b",
+        "android_client_info": {
+          "package_name": "com.nagamint.instantcrush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476488437409-hurp3o30skb3dmuqsfqdtqs8tirhjtii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nagamint.instantcrush",
+            "certificate_hash": "2bed66d9f2f6a76c27ba5dcdb0c17120d75fc202"
+          }
+        },
+        {
+          "client_id": "476488437409-6ilnjdpo1g3659coevflkbofo0764b4u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nagamint.instantcrush",
+            "certificate_hash": "6a95d74ca96f3a157c2e795df9ee8b18407d78b4"
+          }
+        },
+        {
+          "client_id": "476488437409-1tm37u7pg0j993aokil0hp6i934cajbn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5oxVM_YnM8AGdTPSX_LL273Y_mpnSv_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476488437409-1tm37u7pg0j993aokil0hp6i934cajbn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

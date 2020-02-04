@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@android:color/white" android:orientation="vertical">
+
+
+    <TextView
+            android:text="¡Es un match!"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblItsAMatch"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/ananda"
+            android:gravity="center"
+            android:textSize="45sp"
+            android:padding="5dp"/>
+    <TextView
+            android:text="Ahora NombreUser1 y tú pueden enviarse mensajes"
+            android:layout_width="380sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblWhatsNext"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="5dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar mensaje" android:id="@+id/btnSendMsj"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seguir bucando" android:id="@+id/btnKeepLok"/>
+</LinearLayout>
