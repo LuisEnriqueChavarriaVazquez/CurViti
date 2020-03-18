@@ -1,10 +1,10 @@
 # Curvity.
 
-### Make match with your dream's company
+### Make match with your future.
 
 **En este documento de README estaremos colocando información vital sobre como es que esta organizado el proyecto para que podamos hacer pruebas y sepamos donde se encuentra cada cosa.**
 
-<span style="color:red">**Nota =**</span> Este documento fue editado con TYPORA bajo las normas de MARKDOWN; por si deseas editar el archivo READMI para agregar contenido.
+> <span style="color:red">**Nota =**</span> Este documento fue editado con TYPORA bajo las normas de MARKDOWN; por si deseas editar el archivo READMI para agregar contenido.
 
 <img src="Vistas_app\LOGO\Diapositiva2.PNG" alt="LOGO DE CURVITY" style="zoom:50%;" />
 
@@ -28,15 +28,14 @@
 
 ### Tecnológias empleadas.
 
-| Tecnología. | Description | Link (Documentación) |
-| :---------- | ----------- | -------------------- |
-| Materialize | Title       |                      |
-| Paragraph   | Text        |                      |
-|             |             |                      |
-|             |             |                      |
-|             |             |                      |
+| Tecnología. | Description                                                  | Link Documentation                                    |
+| :---------- | ------------------------------------------------------------ | ----------------------------------------------------- |
+| Materialize | Es un framework para la parte del FRONTEND el cual esta basado puramente en JS, jquery y CSS3. | [GO](https://materializecss.com/getting-started.html) |
+| Django      | Nos ayudara a la parte del reciclado de codigo en HTML y a la parte del BACKEND en MYSQL en combinación con PYTHON. | [GO](https://docs.djangoproject.com/en/3.0/)          |
 
+### Gestión de actividades de EQUIPO.
 
+- [x] Actividad 1
 
 
 
