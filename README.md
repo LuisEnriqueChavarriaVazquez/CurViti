@@ -4,7 +4,7 @@
 
 **En este documento de README estaremos colocando información vital sobre como es que esta organizado el proyecto para que podamos hacer pruebas y sepamos donde se encuentra cada cosa.**
 
-<img src="D:\Compu negra\Github's repositories\CurVity\Vistas_app\LOGO\Diapositiva2.PNG" alt="LOGO DE CURVITY" style="zoom:50%;" />
+<img src="Vistas_app\LOGO\Diapositiva2.PNG" alt="LOGO DE CURVITY" style="zoom:50%;" />
 
 - **Proyecto de sugar please**
 
