@@ -4,7 +4,7 @@
 
 **En este documento de README estaremos colocando información vital sobre como es que esta organizado el proyecto para que podamos hacer pruebas y sepamos donde se encuentra cada cosa.**
 
-> <span style="color:red">**Nota =**</span> Este documento fue editado con TYPORA bajo las normas de MARKDOWN; por si deseas editar el archivo READMI para agregar contenido.
+<span style="color:red">**Nota =**</span> Este documento fue editado con TYPORA bajo las normas de MARKDOWN; por si deseas editar el archivo READMI para agregar contenido.
 
 <img src="Vistas_app\LOGO\Diapositiva2.PNG" alt="LOGO DE CURVITY" style="zoom:50%;" />
 
