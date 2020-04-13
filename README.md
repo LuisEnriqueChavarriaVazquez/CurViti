@@ -6,7 +6,7 @@
 
 > <span style="color:red">**Nota =**</span> Este documento fue editado con TYPORA bajo las normas de MARKDOWN; por si deseas editar el archivo READMI para agregar contenido.
 
-<img src="Vistas_app\LOGO\Diapositiva2.PNG" alt="LOGO DE CURVITY" style="zoom:50%;" />
+<img src="Vistas_app\logo\logo.PNG" alt="LOGO DE CURVITY" style="zoom:50%;" />
 
 ### Organización de las CARPETAS.
 
@@ -26,16 +26,9 @@
 
   > Es vital que tengamos acceso a la documentación con el fin de que **si necesitamos un guia** lo podamos encontrar **dentro de este repositorio.**
 
-### Tecnológias empleadas.
+### Planeación base.
 
-| Tecnología. | Description                                                  | Link Documentation                                    |
-| :---------- | ------------------------------------------------------------ | ----------------------------------------------------- |
-| Materialize | Es un framework para la parte del FRONTEND el cual esta basado puramente en JS, jquery y CSS3. | [GO](https://materializecss.com/getting-started.html) |
-| Django      | Nos ayudara a la parte del reciclado de codigo en HTML y a la parte del BACKEND en MYSQL en combinación con PYTHON. | [GO](https://docs.djangoproject.com/en/3.0/)          |
-
-### Gestión de actividades de EQUIPO.
-
-- [x] Actividad 1
+<img src="Vistas_app\logo\plan.PNG" alt="LOGO DE CURVITY" />
 
 
 
