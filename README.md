@@ -28,7 +28,7 @@
 
 ### Planeación base.
 
-<img src="Vistas_app\logo\plan.PNG" alt="LOGO DE CURVITY" />
+<img src="Vistas_app\logo\plan.png" alt="plan" />
 
 
 
