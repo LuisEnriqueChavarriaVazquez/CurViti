@@ -5,4 +5,8 @@ $(document).ready(function(){
 
     //Boton flotante
     $('.fixed-action-btn').floatingActionButton();
+
+    //Tamaño al 100% de la ventana
+    $('.full-height').fullHeight();
+
   });

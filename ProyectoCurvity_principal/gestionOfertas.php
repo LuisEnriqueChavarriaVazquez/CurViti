@@ -1,23 +1,20 @@
 <?php include 'AlmacenIncludesPHP/elementosPhp/HTMLSTRUCTURE/parteSuperior.php' ?>
 
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarSuperior.php' ?>
-operacionesEmpresa.php
+operacionesReclutador.php
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInferior.php' ?>
 
 
 <!--Cuerpo de las secciones-->
 <div class="boxSubjects blue-grey lighten-5">
-    <p class="titles">Gestion sedes.</p>
+    <p class="titles">Gestion ofertas.</p>
+    
     <?php include 'AlmacenIncludesPHP/elementosPhp/cardGestion/cardSuperior.php'; ?>
-    Agregar nueva sede.
+    Agregar nueva oferta.
     <?php include 'AlmacenIncludesPHP/elementosPhp/cardGestion/cardInferior.php'; ?>
 
     <?php include 'AlmacenIncludesPHP/elementosPhp/cardGestion/cardSuperior.php'; ?>
-    Borrar sede.
-    <?php include 'AlmacenIncludesPHP/elementosPhp/cardGestion/cardInferior.php'; ?>
-
-    <?php include 'AlmacenIncludesPHP/elementosPhp/cardGestion/cardSuperior.php'; ?>
-    Actualizar sede.
+    Borrar ofertas publicadas.
     <?php include 'AlmacenIncludesPHP/elementosPhp/cardGestion/cardInferior.php'; ?>
 </div>
 

@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="style/body.css">
     <link rel="stylesheet" href="style/cardOperaciones.css">
     <link rel="stylesheet" href="style/cardGestion.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/cardInicio.css">
+    <link rel="stylesheet" href="style/button.css">
     <!--Define fuentes e iconos-->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

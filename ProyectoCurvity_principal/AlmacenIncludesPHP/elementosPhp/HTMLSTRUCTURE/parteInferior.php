@@ -3,4 +3,5 @@
 <script src="materialize/js/script.js"></script>
 <script src="scripts/scripts.js"></script>
 <script src="scripts/scriptsPropios.js"></script>
+<script src="scripts/fullHeight.js"></script>
 </html>

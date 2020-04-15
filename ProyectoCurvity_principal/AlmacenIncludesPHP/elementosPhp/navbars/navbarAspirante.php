@@ -1,8 +1,8 @@
 <!--Aqui tenemos nuestro navbar-->
-<nav class="nav-extended  light-blue darken-4">
+<nav class="nav-extended  light-blue darken-4 stickyNavbar">
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo"></a>
         <a href="#" data-target="slide-out" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
+        <p class="textNavbar">Pagina principal.</p>
     </div>
     <div class="nav-content">
         <div class="nav-wrapper">

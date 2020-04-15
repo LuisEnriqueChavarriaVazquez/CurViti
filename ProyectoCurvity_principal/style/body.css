@@ -9,8 +9,28 @@ body{
     padding: 0px 30px 20px 20px;
 }
 
+.boxSubjectsInicio{
+    width: 100%;
+    padding: 100px 30px 20px 30px;
+}
+
 .titles{
     font-size: 30px;
     font-weight: 400;
+}
+
+.centerElements{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.backgroundInicioAspirante{
+    height:85.22vh !important;
+    background-image: url('../pictures/explorer.png');
+    background-position: bottom;   
+    background-repeat: no-repeat;     
+    background-size:100%
 }
 

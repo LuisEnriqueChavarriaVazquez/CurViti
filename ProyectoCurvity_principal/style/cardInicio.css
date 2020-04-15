@@ -1,0 +1,19 @@
+.sizeCardInicio{
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+    height: 550px;
+}
+
+.borderCardInicio{
+    border-radius: 15px;
+}
+
+.backgroundCardInicio{
+    background-image: url(../pictures/cardInicio.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.imagesSize{
+    margin: 30px 20px 20px 20px;
+}

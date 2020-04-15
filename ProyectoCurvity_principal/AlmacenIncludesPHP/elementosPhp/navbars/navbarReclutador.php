@@ -1,8 +1,8 @@
 <!--Aqui tenemos nuestro navbar-->
 <nav class="light-blue darken-4 ">
     <div class="nav-wrapper z-depth-2">
-        <a href="#" class="brand-logo"></a>
         <a href="#" data-target="slide-out" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
+        <p class="textNavbar">Operaciones reclutador.</p>
     </div>
 </nav>
 
@@ -22,6 +22,7 @@
         </div>
     </li>
     <li><a href="#!" class="textColor"><i class="material-icons">supervisor_account</i>Editar perfil.</a></li>
-    <li><a href="#!" class="textColor"><i class="material-icons">account_balance</i>Gestionar sedes.</a></li>
+    <li><a href="#!" class="textColor"><i class="material-icons">view_carousel</i>Gestionar con SWIPE.</a></li>
+    <li><a href="#!" class="textColor"><i class="material-icons">chrome_reader_mode</i>Gestionar ofertas de sede.</a></li>
     <li><a href="#!" class="textColor"><i class="material-icons">directions_run</i>Cerrar sesi&oacute;n.</a></li>
 </ul>
