@@ -1,7 +1,9 @@
 <?php include 'AlmacenIncludesPHP/elementosPhp/HTMLSTRUCTURE/parteSuperior.php' ?>
 
 
-<?php include 'AlmacenIncludesPHP/elementosPhp/navbars/navbarInicial.php' ?>
+<?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInicialRetornoSuperior.php' ?>
+index.php
+<?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInicialRetornoInferior.php' ?>
 
 <div class="boxSubjectsInicio full-height light-blue darken-4 centerElements">
     <?php include 'AlmacenIncludesPHP/elementosPhp/cards/cardLogIn.php' ?>
