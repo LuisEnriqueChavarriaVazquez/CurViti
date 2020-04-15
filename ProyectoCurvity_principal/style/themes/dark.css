@@ -1,0 +1,40 @@
+.carousel.carousel-slider .carousel-item {
+    background-color: #37474f ;
+}
+
+.colorDefault{
+    background-color: #263238;
+}
+
+.colorContrast{
+    background-color: #263238 ;
+}
+
+.colorIcons{
+    fill: #fff;
+}
+
+.colorIconsContrast{
+    fill: rgb(212, 212, 212);
+}
+
+.textColor{
+    color: rgb(212, 212, 212) !important;
+}
+
+/*Diseño de la card*/
+
+.contentCardOwn{
+    background-color: #455a64  ;
+}
+
+.contentCardOwn:hover{
+    background-color: #536d79  ;
+}
+
+.titleCardOwn{
+    color: #fff;
+}
+
+/*Diseño del boton*/
+
