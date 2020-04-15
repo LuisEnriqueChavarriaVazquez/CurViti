@@ -5,7 +5,7 @@
 login.php
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInicialRetornoInferior.php' ?>
 
-<div class="boxSubjectsInicio full-height light-blue darken-4 centerElements">
+<div class="boxSubjectsInicio light-blue darken-4 centerElements">
     <div class="sizeCardInicio backgroundCardInicio centerElements borderCardInicio z-depth-3">
         <form class="col s12">
             <div class="row">
@@ -23,7 +23,6 @@ login.php
         </form>
     </div>
     <button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Iniciar sesi&oacute;n.</button>
-
 </div>
 
 <?php include 'AlmacenIncludesPHP/elementosPhp/HTMLSTRUCTURE/parteInferior.php' ?>

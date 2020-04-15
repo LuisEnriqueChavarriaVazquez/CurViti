@@ -5,7 +5,7 @@
 login.php
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInicialRetornoInferior.php' ?>
 
-<div class="boxSubjectsInicio full-height light-blue darken-4 centerElements">
+<div class="boxSubjectsInicio light-blue darken-4 centerElements">
     <div class="sizeCardInicio backgroundCardInicio centerElements borderCardInicio z-depth-3">
         <form class="col s12">
             <div class="row">

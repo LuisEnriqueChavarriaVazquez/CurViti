@@ -14,6 +14,35 @@
     background-size: cover;
 }
 
+
+/*Card para la parte de los registros*/
+.backgroundCardForm{
+    background-image: url(../pictures/formCard.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.sizeCardForm{
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+}
+
+
 .imagesSize{
-    margin: 30px 20px 20px 20px;
+    margin: 10px 20px 20px 20px;
+}
+
+
+/*Cards que van en la parte de arriba del formulario*/
+
+.sizeCardInicioSmall{
+    width: 100%;
+    padding: 5px 50px 5px 50px;
+    margin-bottom: 30px;
+    height: 80px;
+}
+
+.textCardInicioSamll{
+    font-size: 20px;
+    font-weight: 300;
 }
