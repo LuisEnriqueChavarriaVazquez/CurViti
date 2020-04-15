@@ -25,6 +25,10 @@ index.php
                     <label for="first_name">Email.</label>
                 </div>
                 <div class="input-field col s12">
+                    <input placeholder="Escriba su passoword." id="password" type="password" class="validate white-text">
+                    <label for="password">Passoword.</label>
+                </div>
+                <div class="input-field col s12">
                     <textarea placeholder="Escriba la dirección" id="direccion_sede" class="materialize-textarea white-text" data-length="200"></textarea>
                     <label for="direccion_sede">Direccion principal de la empresa.</label>
                 </div>

@@ -15,4 +15,7 @@ $(document).ready(function(){
     //Inicializamos la parte de los scripts para el select
     $('select').formSelect();
 
+    //Para la parte de la fecha de nac
+    $('.datepicker').datepicker();
+
   });
