@@ -51,7 +51,7 @@ signUpEmpresa.php
             </div>
         </form>
     </div>
-    <a href="operacionesEmpresa.php"><button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Finalizar.</button></a>
+    <a href="finalizarProcesoSignUp.php"><button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Siguiente.</button></a>
 </div>
 
 

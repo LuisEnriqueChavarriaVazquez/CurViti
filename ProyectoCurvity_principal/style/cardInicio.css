@@ -29,7 +29,24 @@
 
 
 .imagesSize{
-    margin: 10px 20px 20px 20px;
+    margin: 20px 20px 20px 20px;
+}
+
+/*Card para la parte donde termina el registro de los usuarios (empresas y aspirantes)-*/
+.backgroundCardFinalRegistro{
+    background-image: url(../pictures/registroTerminado.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.titleFinal, .textFinal{
+    color: #fff;
+}
+
+.titleFinal{
+    font-size: 35px;
+    margin: 0px;
+    font-weight: 700;
 }
 
 

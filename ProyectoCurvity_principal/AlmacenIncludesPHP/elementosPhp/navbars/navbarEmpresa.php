@@ -21,7 +21,7 @@
             <a href="#email"><span class="white-text email">Version 1.0.0</span></a>
         </div>
     </li>
-    <li><a href="#!" class="textColor"><i class="material-icons">supervisor_account</i>Editar perfil.</a></li>
-    <li><a href="#!" class="textColor"><i class="material-icons">account_balance</i>Gestionar sedes.</a></li>
+    <li><a href="editarPerfilEmpresa.php" class="textColor"><i class="material-icons">supervisor_account</i>Editar perfil.</a></li>
+    <li><a href="gestionSedes.php" class="textColor"><i class="material-icons">account_balance</i>Gestionar sedes.</a></li>
     <li><a href="#!" class="textColor"><i class="material-icons">directions_run</i>Cerrar sesi&oacute;n.</a></li>
 </ul>

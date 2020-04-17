@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/cardInicio.css">
     <link rel="stylesheet" href="style/button.css">
+    <link rel="stylesheet" href="style/popUps.css">
+    <link rel="stylesheet" href="style/eraseCard.css">
     <!--Define fuentes e iconos-->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="blue-grey lighten-5">

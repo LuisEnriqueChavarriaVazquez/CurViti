@@ -32,7 +32,7 @@
             <a href="#email"><span class="white-text email">Version 1.0.0</span></a>
         </div>
     </li>
-    <li><a href="#!" class="textColor"><i class="material-icons">account_circle</i>Editar perfil.</a></li>
+    <li><a href="editarPerfilAspirante.php" class="textColor"><i class="material-icons">account_circle</i>Editar perfil.</a></li>
     <li><a href="#!" class="textColor"><i class="material-icons">hearing</i>Lista de ofertas enviadas.</a></li>
     <li><a href="#!" class="textColor"><i class="material-icons">star</i>Valore nuestra app.</a></li>
     <li><a href="#!" class="textColor"><i class="material-icons">directions_run</i>Cerrar sesi&oacute;n.</a></li>

@@ -60,8 +60,26 @@ index.php
                 </div>
 
                 <div class="input-field col s12">
+                    <textarea placeholder="Escriba la dirección" id="direccion_aspirante" class="materialize-textarea white-text" data-length="200"></textarea>
+                    <label for="direccion_aspirante">Direccion donde recide.</label>
+                </div>
+
+                <div class="input-field col s12">
                     <input placeholder="Escriba su n&uacute;mero tel&eacute;fono." id="tel_aspirante" type="tel" class="validate white-text">
                     <label for="tel_aspirante">N&uacute;mero de tel&eacute;fono.</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <input placeholder="Escriba la red social" id="facebook" type="text" class="validate white-text">
+                    <label for="facebook_aspirante">(Opcional) Facebook.</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="Escriba la red social" id="skype" type="text" class="validate white-text">
+                    <label for="skype_aspirante">(Opcional) Skype.</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="Escriba la red social" id="twitter" type="text" class="validate white-text">
+                    <label for="twitter_aspirante">(Opcional) Twitter.</label>
                 </div>
             </div>
         </form>

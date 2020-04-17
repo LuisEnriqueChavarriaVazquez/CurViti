@@ -6,7 +6,7 @@
 <div class="boxSubjects blue-grey lighten-5">
     <p class="titles">Operaciones reclutador.</p>
 
-    <a href="#">
+    <a href="ofertasPublicadasPrevioSwipe.php">
     <?php include 'AlmacenIncludesPHP/elementosPhp/cardOperaciones/cardOperacionesSuperior.php'; ?>
     Gestionar solicitudes con SWIPE.
     <?php include 'AlmacenIncludesPHP/elementosPhp/cardOperaciones/cardOperacionesInferior.php'; ?>

@@ -12,7 +12,7 @@
         <?php include 'AlmacenIncludesPHP/elementosPhp/cardOperaciones/cardOperacionesInferior.php'; ?>
     </a>
 
-    <a href="#">
+    <a href="editarPerfilEmpresa.php">
         <?php include 'AlmacenIncludesPHP/elementosPhp/cardOperaciones/cardOperacionesSuperior.php'; ?>
         Modificar datos del perfil.
         <?php include 'AlmacenIncludesPHP/elementosPhp/cardOperaciones/cardOperacionesInferior.php'; ?>

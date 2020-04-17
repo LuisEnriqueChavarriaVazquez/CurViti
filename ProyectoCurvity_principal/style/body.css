@@ -20,6 +20,11 @@ body{
     padding: 100px 30px 20px 30px;
 }
 
+.boxSubjectsErase{
+    width: 100%;
+    padding: 100px 20px 20px 20px;
+}
+
 .titles{
     font-size: 30px;
     font-weight: 400;
@@ -31,6 +36,11 @@ body{
     flex-direction: column;
 }
 
+.centerElementsLeft{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
 
 .backgroundInicioAspirante{
     height:85.22vh !important;
