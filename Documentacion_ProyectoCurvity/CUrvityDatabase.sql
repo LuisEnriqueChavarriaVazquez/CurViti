@@ -2,7 +2,7 @@ drop database if exists Curvity;
 create database if not exists Curvity;
 use Curvity;
 create table if not exists Aspirante 
-(IDAspirante varchar (30) primary key,Contra varchar(30),ApellidoPat varchar(30),
+(IDAspirante varchar (30) primary key,nombre varchar(30),Contra varchar(30),ApellidoPat varchar(30),
 ApellidoMat varchar(30),SueldoDeseado varchar(30),Calle varchar(30),Ciudad varchar (30),
 Estado varchar(30), NivelAcademico varchar(30),CorreoElec varchar(30),ResumenExpPrevLab text,
 ResumenHab text,NombreRedSocial1 varchar(30),NombreUsuarioRedSocial1 varchar(30),
