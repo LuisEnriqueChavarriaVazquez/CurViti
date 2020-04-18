@@ -87,4 +87,5 @@ select * from Empresa;
 select * from Sede;
 select * from Puesto;
 select * from Idioma;
+select * from Matching;
 select * from AspiranteDominaIdioma;
