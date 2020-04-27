@@ -16,9 +16,14 @@
     <link rel="stylesheet" href="style/button.css">
     <link rel="stylesheet" href="style/popUps.css">
     <link rel="stylesheet" href="style/eraseCard.css">
+    <link rel="stylesheet" href="style/cardsSwipe.css">
+    
     <!--Define fuentes e iconos-->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Define archivos del carousel-->
+    <link rel="stylesheet" href="codigos_terceros_carousel_SWIPE/owl.carousel.min.css">
+    <link rel="stylesheet" href="codigos_terceros_carousel_SWIPE/owl.theme.default.css">
 </head>
 
 <body class="blue-grey lighten-5">
