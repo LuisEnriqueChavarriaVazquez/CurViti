@@ -22,7 +22,7 @@ index.php
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba el apellido materno." id="apellido_materno" type="text" class="validate white-text">
-                    <label for="apellido_materno">Apellido paterno.</label>
+                    <label for="apellido_materno">Apellido  materno.</label>
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba su email." id="first_name" type="email" class="validate white-text">
