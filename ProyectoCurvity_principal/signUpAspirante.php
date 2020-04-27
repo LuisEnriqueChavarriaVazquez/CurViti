@@ -14,7 +14,7 @@ index.php
             <div class="row">
                 <div class="input-field col s12">
                     <input placeholder="Escriba su nombre." id="nombre_aspirante" type="text" class="validate white-text">
-                    <label for="nombre_aspirante">Nombre.</label>
+                    <label for="nombre_aspirante">Apellido paterno.</label>
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba el apellido paterno." id="apellido_paterno" type="text" class="validate white-text">
