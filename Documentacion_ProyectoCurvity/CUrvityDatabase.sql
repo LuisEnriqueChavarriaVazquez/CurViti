@@ -3,17 +3,16 @@ create database if not exists Curvity;
 use Curvity;
 create table if not exists Aspirante 
 (IDAspirante varchar (30) primary key,Nombre varchar(30),Contra varchar(30),ApellidoPat varchar(30),
-ApellidoMat varchar(30),SueldoDeseado varchar(30),Calle varchar(30),Ciudad varchar (30),
-Estado varchar(30), NivelAcademico varchar(30),CorreoElec varchar(30),ResumenExpPrevLab text,
+ApellidoMat varchar(30),SueldoDeseado varchar(30),Direccion varchar(30), NivelAcademico varchar(30),CorreoElec varchar(30),ResumenExpPrevLab text,
 ResumenHab text,NombreRedSocial1 varchar(30),NombreUsuarioRedSocial1 varchar(30),
 NombreRedSocial2 varchar(30),NombreUsuarioRedSocial2 varchar(30),
 NombreRedSocial3 varchar(30),NombreUsuarioRedSocial3 varchar(30),
-NombreFotoPerfil varchar(50), DireccionFotoPerfil varchar(30));
+FotoPerfil blob);
 
 create table if not exists Empresa
 (IDEmpresa varchar(30) primary key, Nombre varchar (30),RazonSocial varchar(30), Contra varchar(30),
-Calle varchar(30),Ciudad varchar (30),Estado varchar(30),Tipo varchar(30), Telefono varchar(30),
-DireccionWeb varchar (30),NombreFotoLogo varchar(50), DireccionFotoLogo varchar(30),
+Direccion varchar(30),Tipo varchar(30), Telefono varchar(30),
+DireccionWeb varchar (30),FotoLogo blob,
 NombreRedSocial1 varchar(30),NombreUsuarioRedSocial1 varchar(30),
 NombreRedSocial2 varchar(30),NombreUsuarioRedSocial2 varchar(30),
 NombreRedSocial3 varchar(30),NombreUsuarioRedSocial3 varchar(30));
@@ -22,7 +21,7 @@ create table if not exists Idioma
 (IDIdioma varchar(30) primary key,Nombre varchar(30));
 
 create table if not exists Sede
-(IDSede varchar(30) ,IDEmpresa varchar (30),Nombre varchar (30), Telefono varchar(30),
+(IDSede varchar(30) ,IDEmpresa varchar (30),Nombre varchar (30), Telefono varchar(30), Direccion varchar (30),
 NombreReclutador varchar(30),CorreoElecReclutador varchar(30),ContraReclutador varchar(30),
 NombreRedSocial1 varchar(30),NombreUsuarioRedSocial1 varchar(30),NombreRedSocial2 varchar(30),NombreUsuarioRedSocial2 varchar(30), 
 NombreRedSocial3 varchar(30),NombreUsuarioRedSocial3 varchar(30),foreign key (IDEmpresa) references Empresa(IDEmpresa) on update cascade on delete cascade,
@@ -50,27 +49,25 @@ foreign key (IDEmpresa) references Empresa(IDEmpresa) on delete cascade on updat
 primary key (IDAspirante,IDPuesto,IDSede,IDEmpresa));
 
 insert into Aspirante
-(IDAspirante,Nombre,Contra,ApellidoPat,ApellidoMat,SueldoDeseado,Calle,Ciudad,
-Estado,NivelAcademico,CorreoElec,ResumenExpPrevLab,ResumenHab,NombreRedSocial1,NombreUsuarioRedSocial1,
-NombreRedSocial2,NombreUsuarioRedSocial2,NombreRedSocial3,NombreUsuarioRedSocial3,NombreFotoPerfil,DireccionFotoPerfil)
+(IDAspirante,Nombre,Contra,ApellidoPat,ApellidoMat,SueldoDeseado,Direccion,NivelAcademico,CorreoElec,ResumenExpPrevLab,ResumenHab,NombreRedSocial1,NombreUsuarioRedSocial1,
+NombreRedSocial2,NombreUsuarioRedSocial2,NombreRedSocial3,NombreUsuarioRedSocial3)
  values 
- ("1","Rick","12345","Machorro","Vences","123.45","Norte 25","CDMX",
-"CDMX","Superior","rick@gmail.com","Conserge","Amigable","Facebook","Rick 1",
-"Twitter","Rick 2","Linkedin","Rick 3","Foto Rick","Direccion foto rick");
+ ("1","Rick","12345","Machorro","Vences","123.45","Norte 25","Superior","rick@gmail.com","Conserge","Amigable","Facebook","Rick 1",
+"Twitter","Rick 2","Linkedin","Rick 3");
+select * from aspirante;
 insert into Empresa 
-(IDEmpresa,Nombre,RazonSocial,Contra,Calle,Ciudad,Estado,Tipo,Telefono,DireccionWeb,
-NombreFotoLogo,DireccionFotoLogo,NombreRedSocial1,NombreUsuarioRedSocial1,
+(IDEmpresa,Nombre,RazonSocial,Contra,Direccion,Tipo,Telefono,DireccionWeb,
+NombreRedSocial1,NombreUsuarioRedSocial1,
 NombreRedSocial2,NombreUsuarioRedSocial2,NombreRedSocial3,NombreUsuarioRedSocial3)
  values
-("1","Amazon","Comercio","12345","Norte 25","New York","New York","Comercial","134334","amazon@gmail",
-"Logo Amazon","Direccion Logo Amazon","Facebook","Amazon 1",
+("1","Amazon","Comercio","12345","Norte 25","Comercial","134334","amazon@gmail","Facebook","Amazon 1",
 "Twitter","Amazon 2","Linkedin","Amazon 3");
 
 insert into Sede
-(IDSede,IDEmpresa,Nombre,Telefono,NombreReclutador,CorreoElecReclutador,ContraReclutador,
+(IDSede,IDEmpresa,Nombre,Telefono,Direccion,NombreReclutador,CorreoElecReclutador,ContraReclutador,
 NombreRedSocial1,NombreUsuarioRedSocial1,NombreRedSocial2,NombreUsuarioRedSocial2,
 NombreRedSocial3,NombreUsuarioRedSocial3) values
-("1","1","Amazon del Norte","1235678","Relcutador1","reclutador@gmail.com","123456",
+("1","1","Amazon del Norte","1235678","Norte 45","Reclutador1","reclutador@gmail.com","123456",
 "Facebook","Amazon norte 1","Twitter","Amazon Norte 2",
 "LinkeDin","Amazon Norte 3");
 
