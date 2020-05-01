@@ -23,7 +23,7 @@
 }
 
 function validacionMail ($StringEntrada){
-   if(empty($StringEntrada) || $StringEntrada==''){
+   if(empty($StringEntrada) || trim($StringEntrada)== ""){
       return False;
    }elseif(!filter_var($StringEntrada, FILTER_VALIDATE_EMAIL)){
       return False;
@@ -33,9 +33,9 @@ function validacionMail ($StringEntrada){
 }
 
 function validacionTel ($StringEntrada){
-   if(empty($StringEntrada) || $StringEntrada==''){
+   if(empty($StringEntrada) || trim($StringEntrada)== ""){
       return False;
-   }elseif(!preg_match("[0-9]+",$StringEntrada)){
+   }elseif(!preg_match("/[0-9]+/",$StringEntrada)){
       return False;
    }else{
       return True;
@@ -98,7 +98,7 @@ if(!validacionNormal($direccionAs)){
    $contadorEleConfimados++;
 }
 
-if(!validacionNormal($telAs)){
+if(!validacionTel($telAs)){
    $tel_error="Tel&eacute;fono invalido";
 }else{
    $contadorEleConfimados++;
