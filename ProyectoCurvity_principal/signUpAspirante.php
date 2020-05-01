@@ -26,12 +26,12 @@ index.php
     $mailAs="";
   }
 
-  if(!isset($fechaNacAs)){
-    $fechaNacAs="";
+  if(!isset($password_error)){
+    $password_error="";
   }
 
-  if(!isset($nacionalidadAs)){
-    $nacionalidadAs="";
+  if(!isset($fechaNacAs)){
+    $fechaNacAs="";
   }
 
   if(!isset($escuelaAs)){
@@ -141,20 +141,6 @@ index.php
                     <?php
                        if(isset($fecha_error)){
                            echo "<p class='white-text'>".$fecha_error."</p>";
-                       }
-                    ?>
-                </div>
-
-                <div class="input-field col s12">
-                    <input placeholder="Escriba su nacionalidad." id="nacionalidad" name="nacionalidad"
-                    value="<?php 
-                     echo  htmlspecialchars ($nacionalidadAs)
-                    ?>" 
-                     type="text" class="validate white-text">
-                    <label for="nacionalidad">Nacionalidad.</label>
-                    <?php
-                       if(isset($nacionalidad_error)){
-                           echo "<p class='white-text'>".$nacionalidad_error."</p>";
                        }
                     ?>
                 </div>

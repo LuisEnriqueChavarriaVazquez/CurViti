@@ -12,7 +12,7 @@
    $contadorEleConfimados=0;
    
    function validacionNormal ($StringEntrada){
-      if(empty($StringEntrada) || $StringEntrada==''){
+      if(empty($StringEntrada) || trim($StringEntrada)== ""){
          return False;
       }else{
          return True;

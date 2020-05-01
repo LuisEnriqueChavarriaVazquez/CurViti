@@ -5,7 +5,6 @@
    $mailAs=$_POST["mail"];
    $passwordAs=$_POST["password"];
    $fechaNacAs=$_POST["fecha_nac"];
-   $nacionalidadAs=$_POST["nacionalidad"];
    $escuelaAs=$_POST["alama_mater"];
    $nivelAcAs=$_POST["nivel_acad"];
    $direccionAs=$_POST["direccion_aspirante"];
@@ -16,7 +15,7 @@
    $contadorEleConfimados=0;
   
  function validacionNormal ($StringEntrada){
-   if(empty($StringEntrada) || $StringEntrada==''){
+   if(empty($StringEntrada) || trim($StringEntrada)== ""){
       return False;
    }else{
       return True;
@@ -80,11 +79,6 @@ if(!validacionNormal($fechaNacAs)){
    $contadorEleConfimados++;
 }
 
-if(!validacionNormal($nacionalidadAs)){
-   $nacionalidad_error="Nacionalidad invalida";
-}else{
-   $contadorEleConfimados++;
-}
 
 if(!validacionNormal($escuelaAs)){
    $escuela_error="Escuela invalida";
@@ -117,6 +111,19 @@ if(!validacionNormal($telAs)){
       $_SESSION["mailAs"]=$mailAs;
       $_SESSION["passwordAs"]=$passwordAs;
       $_SESSION["fechaNacAs"]=$fechaNacAs;
+      $_SESSION["escuelaAs"]=$escuelaAs;
+      $_SESSION["nivelAcAs"]=$nivelAcAs;
+      $_SESSION["direccionAs"]=$direccionAs;
+      $_SESSION["telAs"]=$telAs;
+      if(validacionNormal( $facebookAs)){
+        $_SESSION["facebookAs"]=$facebookAs;
+      }
+      if(validacionNormal($skypeAs)){
+         $_SESSION["skypeAs"]=$skypeAs;
+      }
+      if(validacionNormal($twitterAs)){
+         $_SESSION["twitterAs"]=$twitterAs;
+      }
       include("signUpAspirante2.php");
    }else{
       include("signUpAspirante.php");
