@@ -1,4 +1,8 @@
 <?php
+  if(!isset($_SESSION)){
+   session_start();
+}
+
    $nombreAs=$_POST["nombre_aspirante"];
    $apelPatAs=$_POST["apellido_paterno"];
    $apelMatAs=$_POST["apellido_materno"];
@@ -104,7 +108,7 @@ if(!validacionTel($telAs)){
    $contadorEleConfimados++;
 }
 
-   if($contadorEleConfimados==11){
+   if($contadorEleConfimados==10){
       $_SESSION["nombreAs"]=$nombreAs;
       $_SESSION["apPatAs"]=$apelPatAs;
       $_SESSION["apMatAs"]=$apelMatAs;

@@ -1,5 +1,8 @@
 <?php
-   $dirArchivoAsp=$_POST["archivoDir_aspirante"];
+   if(!isset($_SESSION)){
+      session_start();
+   }
+  
    $habiliAsp=$_POST["habilidades_aspirante"];
    $expAsp=$_POST["experiencia_laboral"];
    $nomIdi1Asp=$_POST["idioma_dominado_uno"];
@@ -9,9 +12,23 @@
    $nomIdi3Asp=$_POST["idioma_dominado_tres"];
    $porIdi3Asp=$_POST["porcenta_idioma_tres"];
    $sueldoAsp=$_POST["sueldo_ideal"];
+   $nombreImagenPerfilAsp=$_FILES["archivo_aspirante"]["name"];
    $contadorEleConfimados=0;
+   $idioma1Opc=False;
+   $idioma2Opc=False;
+   $idioma3Opc=False;
+  
    
 
+  function validacionImagen($ImagenEntrada){
+   $allowed_extensions = array("jpg","jpeg","png");
+   $listaValores=explode('.',$ImagenEntrada);
+   if( in_array($listaValores[count($listaValores)-1],$allowed_extensions)){
+      return True;
+   }else{
+      return False;
+   }
+  }
 
    function validacionNormal ($StringEntrada){
       if(empty($StringEntrada) || $StringEntrada==''){
@@ -44,11 +61,12 @@
       }
    }
 
-   if(!validacionNormal($dirArchivoAsp)){
-      $dirArchivo_error="direccion archivo invalido";
-  }else{
+   if(!validacionImagen($nombreImagenPerfilAsp)){
+      $dirArchivo_error="Seleccione una imagen";
+   }else{
      $contadorEleConfimados++;
   }
+ validacionImagen($nombreImagenPerfilAsp);
 
   if(!validacionNormal($habiliAsp)){
    $habilidades_error="Llene el apartado de habilidades";
@@ -64,7 +82,7 @@
 
 
        if(!validacionSueldo($sueldoAsp)){
-          $$sueldo_error="De un suledo real";
+          $sueldo_error="De un suledo real";
        }else{
          $contadorEleConfimados++;
        }
@@ -78,7 +96,7 @@
                   $idioma1por_error="Escriba un porcentaje valido";
                }
             }else{
-               $contadorEleConfimados++;
+               $idioma1Opc=False;
             }
          }else{
             if(validacionNormal($porIdi1Asp)){
@@ -86,7 +104,7 @@
                   $idioma1nombre_error="Llene el apartado siguiente";
                   $idioma1por_error="Escriba un porcentaje valido";
                }else{
-                 $contadorEleConfimados++;
+                  $idioma1Opc=True;
                }
             }else{
                $idioma1nombre_error="Llene el apartado siguiente";
@@ -103,7 +121,7 @@
                $idioma2por_error="Escriba un porcentaje valido";
             }
          }else{
-            $contadorEleConfimados++;
+            $idioma2Opc=False;
          }
       }else{
          if(validacionNormal($porIdi2Asp)){
@@ -111,7 +129,7 @@
                $idioma2nombre_error="Llene el apartado siguiente";
                $idioma2por_error="Escriba un porcentaje valido";
             }else{
-              $contadorEleConfimados++;
+               $idioma2Opc=True;
             }
          }else{
             $idioma2nombre_error="Llene el apartado siguiente";
@@ -128,7 +146,7 @@
                $idioma3por_error="Escriba un porcentaje valido";
             }
          }else{
-            $contadorEleConfimados++;
+            $idioma3Opc=False;
          }
       }else{
          if(validacionNormal($porIdi3Asp)){
@@ -136,19 +154,39 @@
                $idioma3nombre_error="Llene el apartado siguiente";
                $idioma3por_error="Escriba un porcentaje valido";
             }else{
-              $contadorEleConfimados++;
+               $idioma3Opc=True;
             }
          }else{
             $idioma3nombre_error="Llene el apartado siguiente";
             $idioma3por_error="Escriba un porcentaje";
          }
       }
-
-
-   if($contadorEleConfimados>=4){
+   
+   
       
+   if($contadorEleConfimados=4){
+      $servername = "localhost";
+      $username = "root";
+      $password = "ramv1357";
+      $dbname = "Curvity";
+
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      // Check connection
+      if ($conn->connect_error) {
+         die("Connection failed: " . $conn->connect_error);
+      }else{
+         $sql = "insert into Aspirante (IDAspirante,Nombre)
+         values ('1','".$_SESSION["nombreAs"]."')";
+   
+         if ($conn->query($sql) === TRUE) {
+            include("finalizarProcesoSignUp.php");
+         } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+         }
+      }
+
+   }else{
+      include("signUpAspirante2.php");
    }
 
-
-  include("signUpAspirante2.php");
 ?>

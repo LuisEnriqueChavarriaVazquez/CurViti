@@ -4,6 +4,10 @@
 signUpAspirante.php
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInicialRetornoInferior.php' ?>
 <?php
+  if(!isset($_SESSION)){
+    session_start();
+ }
+
   if(!isset($dirArchivoAsp)){
     $dirArchivoAsp="";
   }
@@ -44,12 +48,12 @@ signUpAspirante.php
     $sueldoAsp="";
   }
 
-
 ?>
 
 <div class="boxSubjectsInicioExtended light-blue darken-4 centerElements">
     <div class="sizeCardInicioSmall backgroundCardInicio borderCardInicio z-depth-3">
         <p class="white-text textCardInicioSamll centerElements">Datos adicionales.
+        
         </p>
     </div>
     <div class="sizeCardForm backgroundCardForm borderCardInicio z-depth-3">
