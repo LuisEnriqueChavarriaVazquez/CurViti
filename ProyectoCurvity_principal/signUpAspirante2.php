@@ -101,81 +101,21 @@ signUpAspirante.php
                        echo  "<p class='white-text'>".$experiencia_error."</p>";
                         } ?>
                 </div>
+                
                 <!--Idiomas que domina-->
                 <div class="input-field col s6">
-                    <input placeholder="Idioma aprendido." id="idioma_dominado_uno" name="idioma_dominado_uno"
-                     value="<?php
-                        echo  htmlspecialchars ($nomIdi1Asp)
-                     ?>" 
+                    <input placeholder="Cantidad de idiomas." id="cantidad_de_idiomas" name="cantidad_de_idiomas"
+                     value=""
                      type="text" class="validate white-text truncate">
-                    <label for="idioma_dominado_uno">(Opcional) Idioma 1.</label>
-                    <?php
-                       if(isset($idioma1nombre_error)){
-                       echo  "<p class='white-text'>".$idioma1nombre_error."</p>";
-                        } ?>
-                </div>
-                <div class="input-field col s6">
-                    <input placeholder="Porcentaje." id="porcenta_idioma_uno" name="porcenta_idioma_uno"
-                    value="<?php
-                        echo  htmlspecialchars ($porIdi1Asp)
-                     ?>"
-                     type="text" class="validate white-text">
-                    <label for="porcenta_idioma_uno">% Idioma.</label>
-                    <?php
-                       if(isset($idioma1por_error)){
-                       echo  "<p class='white-text'>".$idioma1por_error."</p>";
-                        } ?>
+                    <label for="cantidad_de_idiomas">Cantidad de idiomas que domina.</label>
                 </div>
 
-                <div class="input-field col s6">
-                    <input placeholder="Idioma aprendido." id="idioma_dominado_dos"  name="idioma_dominado_dos" 
-                    value="<?php
-                        echo  htmlspecialchars ($nomIdi2Asp)
-                     ?>"
-                    type="text" class="validate white-text truncate">
-                    <label for="idioma_dominado_dos">(Opcional) Idioma 2.</label>
-                    <?php
-                       if(isset($idioma2nombre_error)){
-                       echo  "<p class='white-text'>".$idioma2nombre_error."</p>";
-                        } ?>
-                </div>
-                <div class="input-field col s6">
-                    <input placeholder="Porcentaje." id="porcenta_idioma_dos" name="porcenta_idioma_dos" 
-                    value="<?php
-                        echo  htmlspecialchars ($porIdi2Asp)
-                     ?>"
-                    type="text" class="validate white-text">
-                    <label for="porcenta_idioma_dos">% Idioma.</label>
-                    <?php
-                       if(isset($idioma2por_error)){
-                       echo  "<p class='white-text'>".$idioma2por_error."</p>";
-                        } ?>
+                <div class="input-field col s12">
+                    <textarea placeholder="Idiomas que domina" id="idiomas_domina" name="idiomas_domina" class="materialize-textarea white-text" data-length="200"></textarea>
+                    <label for="idiomas_domina">Idiomas que domina.</label>
                 </div>
 
-                <div class="input-field col s6">
-                    <input placeholder="Idioma aprendido." id="idioma_dominado_tres" name="idioma_dominado_tres"
-                    value="<?php
-                        echo  htmlspecialchars ($nomIdi3Asp)
-                     ?>"
-                    type="text" class="validate white-text truncate">
-                    <label for="idioma_dominado_tres">(Opcional) Idioma 3.</label>
-                    <?php
-                       if(isset($idioma3nombre_error)){
-                       echo  "<p class='white-text'>".$idioma3nombre_error."</p>";
-                        } ?>
-                </div>
-                <div class="input-field col s6">
-                    <input placeholder="Porcentaje." id="porcenta_idioma_tres" name="porcenta_idioma_tres"
-                    value="<?php
-                        echo  htmlspecialchars ($porIdi3Asp)
-                     ?>"
-                     type="text" class="validate white-text">
-                    <label for="porcenta_idioma_tres">% Idioma.</label>
-                    <?php
-                       if(isset($idioma3por_error)){
-                       echo  "<p class='white-text'>".$idioma3por_error."</p>";
-                        } ?>
-                </div>
+               
 
                 <!--Sueldo ideal-->
                 <div class="input-field col s12">
