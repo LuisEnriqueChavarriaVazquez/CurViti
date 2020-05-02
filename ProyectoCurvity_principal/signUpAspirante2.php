@@ -20,28 +20,12 @@ signUpAspirante.php
     $expAsp="";
   }
 
-  if(!isset($nomIdi1Asp)){
-    $nomIdi1Asp="";
+  if(!isset($cantidadIdiomasAsp)){
+    $cantidadIdiomasAsp="";
   }
 
-  if(!isset($porIdi1Asp)){
-    $porIdi1Asp="";
-  }
-
-  if(!isset($nomIdi2Asp)){
-    $nomIdi2Asp="";
-  }
-
-  if(!isset($porIdi2Asp)){
-    $porIdi2Asp="";
-  }
-
-  if(!isset($nomIdi3Asp)){
-    $nomIdi3Asp="";
-  }
-
-  if(!isset($porIdi3Asp)){
-    $porIdi3Asp="";
+  if(!isset($idiomasEspAsp)){
+    $idiomasEspAsp="";
   }
 
   if(!isset($sueldoAsp)){
@@ -105,14 +89,26 @@ signUpAspirante.php
                 <!--Idiomas que domina-->
                 <div class="input-field col s12">
                     <input placeholder="Cantidad de idiomas." id="cantidad_de_idiomas" name="cantidad_de_idiomas"
-                     value=""
+                     value="<?php
+                            echo  htmlspecialchars ($cantidadIdiomasAsp)
+                        ?>"
                      type="text" class="validate white-text truncate">
                     <label for="cantidad_de_idiomas">Cantidad de idiomas que domina.</label>
+                    <?php
+                       if(isset($cantidadIdiomas_error)){
+                       echo  "<p class='white-text'>".$cantidadIdiomas_error."</p>";
+                        } ?>
                 </div>
 
                 <div class="input-field col s12">
-                    <textarea placeholder="Idiomas que domina" id="idiomas_domina" name="idiomas_domina" class="materialize-textarea white-text" data-length="200"></textarea>
+                    <textarea placeholder="Idiomas que domina" id="idiomas_domina" name="idiomas_domina" class="materialize-textarea white-text" data-length="200"><?php
+                            echo  htmlspecialchars ($idiomasEspAsp)
+                        ?></textarea>
                     <label for="idiomas_domina">Cuentenos que idiomas domina.</label>
+                    <?php
+                       if(isset($idiomasEsp_error)){
+                       echo  "<p class='white-text'>".$idiomasEsp_error."</p>";
+                        } ?>
                 </div>
 
                

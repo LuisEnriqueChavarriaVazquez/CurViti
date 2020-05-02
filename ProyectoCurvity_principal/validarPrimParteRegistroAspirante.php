@@ -39,7 +39,7 @@ function validacionMail ($StringEntrada){
 function validacionTel ($StringEntrada){
    if(empty($StringEntrada) || trim($StringEntrada)== ""){
       return False;
-   }elseif(!preg_match("/[0-9]+/",$StringEntrada)){
+   }elseif(!preg_match("/^[0-9]+$/",$StringEntrada)){
       return False;
    }else{
       return True;
