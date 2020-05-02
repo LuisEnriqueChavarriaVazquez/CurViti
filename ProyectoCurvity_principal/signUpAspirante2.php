@@ -101,9 +101,9 @@ signUpAspirante.php
                        echo  "<p class='white-text'>".$experiencia_error."</p>";
                         } ?>
                 </div>
-                
+
                 <!--Idiomas que domina-->
-                <div class="input-field col s6">
+                <div class="input-field col s12">
                     <input placeholder="Cantidad de idiomas." id="cantidad_de_idiomas" name="cantidad_de_idiomas"
                      value=""
                      type="text" class="validate white-text truncate">
@@ -112,7 +112,7 @@ signUpAspirante.php
 
                 <div class="input-field col s12">
                     <textarea placeholder="Idiomas que domina" id="idiomas_domina" name="idiomas_domina" class="materialize-textarea white-text" data-length="200"></textarea>
-                    <label for="idiomas_domina">Idiomas que domina.</label>
+                    <label for="idiomas_domina">Cuentenos que idiomas domina.</label>
                 </div>
 
                
