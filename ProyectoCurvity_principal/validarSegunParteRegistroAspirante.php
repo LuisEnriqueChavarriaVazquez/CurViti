@@ -1,4 +1,5 @@
 <?php
+  require('claseAspirante.php');
    if(!isset($_SESSION)){
       session_start();
    }
@@ -101,14 +102,49 @@
       // Check connection
       if ($conn->connect_error) {
          die("Connection failed: " . $conn->connect_error);
+         #include("errorPagina.php");
       }else{
-         $sql = "insert into Aspirante (IDAspirante,Nombre)
-         values ('1','".$_SESSION["nombreAs"]."')";
+         $aspiranteObje=new Aspirante($_SESSION["nombreAs"],$_SESSION["passwordAs"],
+         $_SESSION["apPatAs"],$_SESSION["apMatAs"],$_SESSION["fechaNacAs"],
+         $expAsp,$sueldoAsp,$_SESSION["direccionAs"],$_SESSION["nivelAcAs"],$_SESSION["escuelaAs"],
+         $habiliAsp,$_SESSION["mailAs"],$_SESSION["telAs"],$cantidadIdiomasAsp,$idiomasEspAsp);
+         $fileFoto=addslashes(file_get_contents($_FILES["archivo_aspirante"]["tmp_name"]));
+         $sqlCeldas= "insert into Aspirante (IDAspirante,Nombre,Contra,ApellidoPat,ApellidoMat,
+         SueldoDeseado,Direccion,Escuela,NivelAcademico,CorreoElec,ResumenExpPrevLab,ResumenHab,
+         numeroIdiomas,detallesIdiomas,FotoPerfil";
+        
+         $sqlValores=" values('".$aspiranteObje->generarIdentificador()."','".$aspiranteObje->get_nombre()."'
+         ,'".$aspiranteObje->get_password()."','".$aspiranteObje->get_apellidoPaterno()."',
+         '".$aspiranteObje->get_apellidoMaterno()."','".$aspiranteObje->get_sueldoDeseado()."',
+         '".$aspiranteObje->get_direccion()."','".$aspiranteObje->get_escuela()."',
+         '".$aspiranteObje->get_nivelAcademico()."','".$aspiranteObje->get_correoElectronico()."',
+         '".$aspiranteObje->get_resumenExperienciasLaborales()."','".$aspiranteObje->get_resumenHabilidades()."',
+         ".$aspiranteObje->get_numeroIdiomas().",'".$aspiranteObje->get_detallesIdiomas()."','$fileFoto'";
+         if(isset($_SESSION["facebookAs"])){
+            $sqlCeldas=$sqlCeldas.",FacebookAspirante";
+            $sqlValores=$sqlValores.",'".$_SESSION["facebookAs"]."'";
+            $aspiranteObje->set_NombreFacebook($_SESSION["facebookAs"]);
+         }
+
+         if(isset($_SESSION["skypeAs"])){
+            $sqlCeldas=$sqlCeldas.",SkypeAspirante";
+            $sqlValores=$sqlValores.",'".$_SESSION["skypeAs"]."'";
+            $aspiranteObje->set_NombreSkype($_SESSION["skypeAs"]);
+         }
+
+         if(isset($_SESSION["twitterAs"])){
+            $sqlCeldas=$sqlCeldas.",TwitterAspirante";
+            $sqlValores=$sqlValores.",'".$_SESSION["twitterAs"]."'";
+            $aspiranteObje->set_NombreTwitter($_SESSION["twitterAs"]);
+         }
+         $sqlCeldas=$sqlCeldas.")";
+         $sqlValores=$sqlValores.")";
+         $sql=$sqlCeldas.$sqlValores;
    
          if ($conn->query($sql) === TRUE) {
             include("finalizarProcesoSignUp.php");
          } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            include("errorPagina.php");
          }
       }
 

@@ -116,9 +116,19 @@ if(!validacionTel($telAs)){
       $_SESSION["passwordAs"]=$passwordAs;
       $_SESSION["fechaNacAs"]=$fechaNacAs;
       $_SESSION["escuelaAs"]=$escuelaAs;
-      $_SESSION["nivelAcAs"]=$nivelAcAs;
+      if($nivelAcAs=="1"){
+         $_SESSION["nivelAcAs"]="UNIVERSIDAD";
+      }elseif($nivelAcAs=="2"){
+         $_SESSION["nivelAcAs"]="CARRERA T&Eacute;CNICA";
+      }elseif($nivelAcAs=="3"){
+         $_SESSION["nivelAcAs"]="PREPARATORIA";
+      }elseif($nivelAcAs=="4"){
+         $_SESSION["nivelAcAs"]="SECUNDARIA";
+      }
+      
       $_SESSION["direccionAs"]=$direccionAs;
       $_SESSION["telAs"]=$telAs;
+      
       if(validacionNormal( $facebookAs)){
         $_SESSION["facebookAs"]=$facebookAs;
       }
@@ -126,7 +136,7 @@ if(!validacionTel($telAs)){
          $_SESSION["skypeAs"]=$skypeAs;
       }
       if(validacionNormal($twitterAs)){
-         $_SESSION["twitterAs"]=$twitterAs;
+          $_SESSION["twitterAs"]=$twitterAs;
       }
       include("signUpAspirante2.php");
    }else{

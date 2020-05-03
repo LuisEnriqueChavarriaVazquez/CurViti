@@ -4,9 +4,10 @@ use Curvity;
 create table if not exists Aspirante 
 (IDAspirante varchar (30) primary key,Nombre varchar(30),Contra varchar(30),ApellidoPat varchar(30),
 ApellidoMat varchar(30),SueldoDeseado varchar(30),Direccion varchar(30), NivelAcademico varchar(30),CorreoElec varchar(30),ResumenExpPrevLab text,
-ResumenHab text,NombreRedSocial1 varchar(30),NombreUsuarioRedSocial1 varchar(30),
-NombreRedSocial2 varchar(30),NombreUsuarioRedSocial2 varchar(30),
-NombreRedSocial3 varchar(30),NombreUsuarioRedSocial3 varchar(30),
+ResumenHab text, numeroIdiomas int, detallesIdiomas text,
+NombreRedSocial1 varchar(30) default 'Ninguno' ,NombreUsuarioRedSocial1 varchar(30) default 'Ninguno' ,
+NombreRedSocial2 varchar(30) default 'Ninguno' ,NombreUsuarioRedSocial2 varchar(30) default 'Ninguno' ,
+NombreRedSocial3 varchar(30) default 'Ninguno' ,NombreUsuarioRedSocial3 varchar(30) default 'Ninguno',
 FotoPerfil blob);
 
 create table if not exists Empresa
@@ -49,10 +50,11 @@ foreign key (IDEmpresa) references Empresa(IDEmpresa) on delete cascade on updat
 primary key (IDAspirante,IDPuesto,IDSede,IDEmpresa));
 
 insert into Aspirante
-(IDAspirante,Nombre,Contra,ApellidoPat,ApellidoMat,SueldoDeseado,Direccion,NivelAcademico,CorreoElec,ResumenExpPrevLab,ResumenHab,NombreRedSocial1,NombreUsuarioRedSocial1,
-NombreRedSocial2,NombreUsuarioRedSocial2,NombreRedSocial3,NombreUsuarioRedSocial3)
+(IDAspirante,Nombre,Contra,ApellidoPat,ApellidoMat,SueldoDeseado,Direccion,NivelAcademico,CorreoElec,
+ResumenExpPrevLab,ResumenHab,numeroIdiomas,detallesIdiomas,NombreRedSocial1,NombreUsuarioRedSocial1,NombreRedSocial2,NombreUsuarioRedSocial2,
+NombreRedSocial3,NombreUsuarioRedSocial3)
  values 
- ("1","Rick","12345","Machorro","Vences","123.45","Norte 25","Superior","rick@gmail.com","Conserge","Amigable","Facebook","Rick 1",
+ ("1","Rick","12345","Machorro","Vences","123.45","Norte 25","Superior","rick@gmail.com","Conserge","Amigable",1,"Ingles","Facebook","Rick 1",
 "Twitter","Rick 2","Linkedin","Rick 3");
 select * from aspirante;
 insert into Empresa 
