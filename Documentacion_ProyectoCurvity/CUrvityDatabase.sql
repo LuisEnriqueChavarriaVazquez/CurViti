@@ -3,12 +3,10 @@ create database if not exists Curvity;
 use Curvity;
 create table if not exists Aspirante 
 (IDAspirante varchar (30) primary key,Nombre varchar(30),Contra varchar(30),ApellidoPat varchar(30),
-ApellidoMat varchar(30),SueldoDeseado varchar(30),Direccion varchar(30), NivelAcademico varchar(30),CorreoElec varchar(30),ResumenExpPrevLab text,
+ApellidoMat varchar(30),SueldoDeseado varchar(30),Direccion varchar(30),Escuela varchar(30),NivelAcademico varchar(30),CorreoElec varchar(30),ResumenExpPrevLab text,
 ResumenHab text, numeroIdiomas int, detallesIdiomas text,
-NombreRedSocial1 varchar(30) default 'Ninguno' ,NombreUsuarioRedSocial1 varchar(30) default 'Ninguno' ,
-NombreRedSocial2 varchar(30) default 'Ninguno' ,NombreUsuarioRedSocial2 varchar(30) default 'Ninguno' ,
-NombreRedSocial3 varchar(30) default 'Ninguno' ,NombreUsuarioRedSocial3 varchar(30) default 'Ninguno',
-FotoPerfil blob);
+FacebookAspirante varchar(30) default 'Ninguno' ,SkypeAspirante varchar(30) default 'Ninguno' ,TwitterAspirante varchar(30) default 'Ninguno',
+FotoPerfil longblob);
 
 create table if not exists Empresa
 (IDEmpresa varchar(30) primary key, Nombre varchar (30),RazonSocial varchar(30), Contra varchar(30),
@@ -50,12 +48,11 @@ foreign key (IDEmpresa) references Empresa(IDEmpresa) on delete cascade on updat
 primary key (IDAspirante,IDPuesto,IDSede,IDEmpresa));
 
 insert into Aspirante
-(IDAspirante,Nombre,Contra,ApellidoPat,ApellidoMat,SueldoDeseado,Direccion,NivelAcademico,CorreoElec,
-ResumenExpPrevLab,ResumenHab,numeroIdiomas,detallesIdiomas,NombreRedSocial1,NombreUsuarioRedSocial1,NombreRedSocial2,NombreUsuarioRedSocial2,
-NombreRedSocial3,NombreUsuarioRedSocial3)
+(IDAspirante,Nombre,Contra,ApellidoPat,ApellidoMat,SueldoDeseado,Direccion,Escuela,NivelAcademico,CorreoElec,
+ResumenExpPrevLab,ResumenHab,numeroIdiomas,detallesIdiomas,FacebookAspirante,SkypeAspirante,TwitterAspirante)
  values 
- ("1","Rick","12345","Machorro","Vences","123.45","Norte 25","Superior","rick@gmail.com","Conserge","Amigable",1,"Ingles","Facebook","Rick 1",
-"Twitter","Rick 2","Linkedin","Rick 3");
+ ("1","Rick","12345","Machorro","Vences","123.45","Norte 25","Amauta","Superior","rick@gmail.com","Conserge",
+ "Amigable",1,"Ingles","Rick 1","Rick 2","Rick 3");
 select * from aspirante;
 insert into Empresa 
 (IDEmpresa,Nombre,RazonSocial,Contra,Direccion,Tipo,Telefono,DireccionWeb,
