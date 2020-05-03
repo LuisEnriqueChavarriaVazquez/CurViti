@@ -13,7 +13,7 @@ ofertasPublicadasPrevioSwipe.php
     <!-- Primer item -->
     <div class="margin-down-bigger elementoSwipePadre">
 
-        <div class="idDisplay">IPNEMAPDDANSD</div> 
+        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div> 
         <div class="wrapper">
 
             <div class="clash-card empleado">
@@ -41,7 +41,7 @@ ofertasPublicadasPrevioSwipe.php
 
     <!-- Primer item -->
     <div class="margin-down-bigger elementoSwipePadre">
- <div class="idDisplay">IPNEMAPDDANSD</div>
+ <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
         <div class="wrapper">
 
             <div class="clash-card empleado">
@@ -69,7 +69,7 @@ ofertasPublicadasPrevioSwipe.php
 
     <!-- Primer item -->
     <div class="margin-down-bigger elementoSwipePadre">
- <div class="idDisplay">IPNEMAPDDANSD</div>
+ <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
         <div class="wrapper">
 
             <div class="clash-card empleado">
@@ -97,7 +97,7 @@ ofertasPublicadasPrevioSwipe.php
 
     <!-- Primer item -->
     <div class="margin-down-bigger elementoSwipePadre">
- <div class="idDisplay">IPNEMAPDDANSD</div>
+ <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
         <div class="wrapper">
 
             <div class="clash-card empleado">

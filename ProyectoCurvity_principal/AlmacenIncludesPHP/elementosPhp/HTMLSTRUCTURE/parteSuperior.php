@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style/popUps.css">
     <link rel="stylesheet" href="style/eraseCard.css">
     <link rel="stylesheet" href="style/cardsSwipe.css">
+    <link rel="stylesheet" href="style/barraCarga.css">
     
     <!--Define fuentes e iconos-->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">

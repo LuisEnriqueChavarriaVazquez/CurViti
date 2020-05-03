@@ -3201,7 +3201,7 @@ td, th {
   height: 4px;
   display: block;
   width: 100%;
-  background-color: #acece6;
+  background-color: #aaaaaa;
   border-radius: 2px;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden;
@@ -3212,7 +3212,7 @@ td, th {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #a8e3ff;
+  background-color: #ffffff;
   -webkit-transition: width .3s linear;
   transition: width .3s linear;
 }
