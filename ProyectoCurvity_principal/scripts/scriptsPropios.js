@@ -21,10 +21,12 @@ $(document).ready(function () {
         adaptiveHeight:true,
         centerMode: true,
         centerPadding: '0px',
+        lazyLoad: 'progressive',
         cssEase: 'ease',
         infinite: true,
         mobileFirst: true,
         slidesToShow: 1
     });
+
 
 });
