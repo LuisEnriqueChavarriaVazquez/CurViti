@@ -16,9 +16,9 @@ $(document).ready(function () {
 
     //Carousel Swipe
     $('.SWIPECAROUSEL').slick({
-        dots:false,
-        arrows:false,
-        adaptiveHeight:true,
+        dots: false,
+        arrows: false,
+        adaptiveHeight: true,
         centerMode: true,
         centerPadding: '0px',
         lazyLoad: 'progressive',
@@ -27,6 +27,30 @@ $(document).ready(function () {
         mobileFirst: true,
         slidesToShow: 1
     });
+
+    //Codigo del buscador (Desplegar elementos)
+    var consulta = $("#searchTable").DataTable();
+
+    $("#inputBusqueda").keyup(function () {
+        consulta.search($(this).val()).draw();
+
+        $("header").css({
+            "height": "100vh",
+            "background": "rgba(0,0,0,0.5)"
+        })
+
+        if ($("#inputBusqueda").val() == "") {
+            $("header").css({
+                "height": "auto",
+                "background": "none"
+            })
+
+            $("#search").hide()
+
+        } else {
+            $("#search").fadeIn("fast");
+        }
+    })
 
 
 });

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="style/eraseCard.css">
     <link rel="stylesheet" href="style/cardsSwipe.css">
     <link rel="stylesheet" href="style/barraCarga.css">
+    <link rel="stylesheet" href="style/elementosBuscador.css">
     
     
     <!--Define fuentes e iconos-->

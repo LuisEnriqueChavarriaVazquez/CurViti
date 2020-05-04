@@ -5,7 +5,7 @@
 }
 
 .borderCardInicio{
-    border-radius: 15px;
+    border-radius: 15px !important;
 }
 
 .backgroundCardInicio{
@@ -62,4 +62,10 @@
 .textCardInicioSamll{
     font-size: 20px;
     font-weight: 300;
+}
+
+/*Cards para el inicio de la busqueda*/
+.roundPictures{
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
 }

@@ -21,7 +21,7 @@ ofertasPublicadasPrevioSwipe.php
                 <div class="buttonContainerEvaluate z-depth-3">
                     <div onclick="M.toast({html: 'Aspirante aceptado'}); borrar()" class="aceptaButton green lighten-4 btn buttonEvaluate waves-effect waves-green"><img src="icons/check.svg"></div>
                     <div onclick="M.toast({html: 'Aspirante rechazado'}); borrar()" class="rechazaButton red lighten-4 btn buttonEvaluate waves-effect waves-red"><img src="icons/cross.svg"></div>
-                    <div onclick="M.toast({html: 'Cambios desechos'}); borrarRetorno()" class="rehacerButton buttonHide btn buttonEvaluate waves-effect waves-light"><img src="icons/undo.svg"></div>
+                    <div onclick="M.toast({html: 'Cambios desechos'}); borrarRetorno()" class="rehacerButton grey lighten-2 buttonHide btn buttonEvaluate waves-effect waves-light"><img src="icons/undo.svg"></div>
                 </div>
                 <section class="contentDescription">
                     <div class="clash-card__unit-description black-text left-align">
@@ -82,7 +82,7 @@ ofertasPublicadasPrevioSwipe.php
                 <div class="buttonContainerEvaluate z-depth-3">
                     <div onclick="M.toast({html: 'Aspirante aceptado'}); borrar()" class="aceptaButton green lighten-4 btn buttonEvaluate waves-effect waves-green"><img src="icons/check.svg"></div>
                     <div onclick="M.toast({html: 'Aspirante rechazado'}); borrar()" class="rechazaButton red lighten-4 btn buttonEvaluate waves-effect waves-red"><img src="icons/cross.svg"></div>
-                    <div onclick="M.toast({html: 'Cambios desechos'}); borrarRetorno()" class="rehacerButton buttonHide btn buttonEvaluate waves-effect waves-light"><img src="icons/undo.svg"></div>
+                    <div onclick="M.toast({html: 'Cambios desechos'}); borrarRetorno()" class="rehacerButton grey lighten-2 buttonHide btn buttonEvaluate waves-effect waves-light"><img src="icons/undo.svg"></div>
                 </div>
                 <section class="contentDescription">
                     <div class="clash-card__unit-description black-text left-align">
@@ -143,7 +143,7 @@ ofertasPublicadasPrevioSwipe.php
                 <div class="buttonContainerEvaluate z-depth-3">
                     <div onclick="M.toast({html: 'Aspirante aceptado'}); borrar()" class="aceptaButton green lighten-4 btn buttonEvaluate waves-effect waves-green"><img src="icons/check.svg"></div>
                     <div onclick="M.toast({html: 'Aspirante rechazado'}); borrar()" class="rechazaButton red lighten-4 btn buttonEvaluate waves-effect waves-red"><img src="icons/cross.svg"></div>
-                    <div onclick="M.toast({html: 'Cambios desechos'}); borrarRetorno()" class="rehacerButton buttonHide btn buttonEvaluate waves-effect waves-light"><img src="icons/undo.svg"></div>
+                    <div onclick="M.toast({html: 'Cambios desechos'}); borrarRetorno()" class="rehacerButton grey lighten-2  buttonHide btn buttonEvaluate waves-effect waves-light"><img src="icons/undo.svg"></div>
                 </div>
                 <section class="contentDescription">
                     <div class="clash-card__unit-description black-text left-align">
