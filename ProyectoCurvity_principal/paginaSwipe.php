@@ -9,11 +9,39 @@ ofertasPublicadasPrevioSwipe.php
 
 <!-- Set up your HTML -->
 <div class="alturaAdaptable contank owl-carousel light-blue darken-4">
-
+    
+    <!-- Primer item -->
+    <div class="margin-down-bigger elementoSwipePadre">
+        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
+        <div class="wrapper">
+    
+            <div class="clash-card empleado">
+                <div class="clash-card__image clash-card__image--empleado">
+                    <img src="pictures/personas/manuel.jpg" class="card_image_empleado">
+                </div>
+                <div class="buttonContainerEvaluate z-depth-3">
+                    <div id="aceptaButtonHide" onclick="M.toast({html: 'Aspirante aceptado'})" class="btn buttonEvaluate waves-effect waves-green"><img src="icons/check.svg"></div>
+                    <div id="rechazaButtonHide" onclick="M.toast({html: 'Aspirante rechazado'})" class="btn buttonEvaluate waves-effect waves-red"><img src="icons/cross.svg"></div>
+                    <div id="rehacerButton" onclick="M.toast({html: 'Cambios desechos'})" class="btn buttonEvaluate waves-effect waves-light"><img src="icons/undo.svg"></div>
+                </div>
+                <div class="clash-card__unit-description black-text left-align">
+                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
+                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
+                </div>
+                <div class="clash-card__unit-description black-text left-align">
+                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
+                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
+                </div>
+    
+            </div> <!-- end clash-card empleado-->
+    
+        </div> <!-- end wrapper -->
+    
+    </div>
     <!-- Primer item -->
     <div class="margin-down-bigger elementoSwipePadre">
 
-        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div> 
+        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
         <div class="wrapper">
 
             <div class="clash-card empleado">
@@ -39,37 +67,10 @@ ofertasPublicadasPrevioSwipe.php
 
     </div>
 
-    <!-- Primer item -->
-    <div class="margin-down-bigger elementoSwipePadre">
- <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
-        <div class="wrapper">
-
-            <div class="clash-card empleado">
-                <div class="clash-card__image clash-card__image--empleado">
-                    <img src="pictures/personas/manuel.jpg" class="card_image_empleado">
-                </div>
-                <div class="buttonContainerEvaluate z-depth-3">
-                    <div id="aceptaButton" class="buttonEvaluate waves-effect waves-green"><img src="icons/check.svg"></div>
-                    <div id="rechazaButton" class="buttonEvaluate waves-effect waves-red"><img src="icons/cross.svg"></div>
-                </div>
-                <div class="clash-card__unit-description black-text left-align">
-                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
-                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
-                </div>
-                <div class="clash-card__unit-description black-text left-align">
-                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
-                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
-                </div>
-
-            </div> <!-- end clash-card empleado-->
-
-        </div> <!-- end wrapper -->
-
-    </div>
 
     <!-- Primer item -->
     <div class="margin-down-bigger elementoSwipePadre">
- <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
+        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
         <div class="wrapper">
 
             <div class="clash-card empleado">
@@ -97,7 +98,7 @@ ofertasPublicadasPrevioSwipe.php
 
     <!-- Primer item -->
     <div class="margin-down-bigger elementoSwipePadre">
- <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
+        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
         <div class="wrapper">
 
             <div class="clash-card empleado">

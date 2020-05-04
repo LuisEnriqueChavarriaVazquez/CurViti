@@ -24,6 +24,4 @@ $(document).ready(function () {
   //Activa los pop ups propios
   $('.modal').modal();
 
-  //Activa la parte de los tooltips
-  $('.tooltipped').tooltip();
 });
