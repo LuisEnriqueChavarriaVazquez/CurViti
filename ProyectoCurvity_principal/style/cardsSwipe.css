@@ -28,19 +28,35 @@
     font-size: 23px;
     color: black;
     font-weight: 900;
-    margin-bottom: 5px;
+    margin-bottom: -15px;
 }
 .clash-card__unit-description {
-    padding: 0px 20px 5px 20px;
+    padding: 0px 20px 0px 20px;
     margin-bottom: 10px;
     text-align: left;
 }
 
+.small_text_summary{
+    font-size: 13px;
+}
+
+.small_text_social_media{
+    font-size: 13px;
+    margin-bottom: -10px !important;
+}
+
+.small_text_social_media_name{
+    font-weight: 900;
+}
+
+.last_social_media{
+    margin-bottom: 10px !important;
+}
 
 /*Contenedor para las cards de SWIPE*/
 
 .contank{
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
 }
 
 
@@ -82,8 +98,8 @@
     justify-content: center;
 }
 
-#aceptaButtonHide, #rechazaButtonHide{
-    display: none;
+.buttonHide{
+    display: none !important;
 }
 
 #rehacerButton{
@@ -93,6 +109,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 

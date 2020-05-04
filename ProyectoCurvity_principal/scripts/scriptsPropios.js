@@ -26,4 +26,6 @@ $(document).ready(function () {
         document.getElementById("myBar").style.width = scrolled + "%";
     }
 
+
+
 });
