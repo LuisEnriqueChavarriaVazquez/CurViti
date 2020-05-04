@@ -8,7 +8,7 @@ ofertasPublicadasPrevioSwipe.php
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////En esta seccion comienza el slider para marcas de codigos de FALLA OBDII-->
 
 <!-- Set up your HTML -->
-<div class="alturaAdaptable contank owl-carousel light-blue darken-4">
+<div class="alturaAdaptable SWIPECAROUSEL contank  light-blue darken-4">
 
     <!-- Primer item -->
     <div class="margin-down-bigger elementoSwipePadre">
@@ -25,12 +25,21 @@ ofertasPublicadasPrevioSwipe.php
                 </div>
                 <div class="clash-card__unit-description black-text left-align">
                     <div class="clash-card__unit-name truncate">Nombre.</div>
-                    <p class="flow-text">Pedro Martinez Juarez.</p>
+                    <p class="flow-text name_margin">Pedro Martinez Juarez.</p>
                 </div>
                 <div class="clash-card__unit-description black-text left-align">
                     <div class="clash-card__unit-name truncate">Experiencia laboral.</div>
-                    <p class="small_text_summary">Lorem ipsum dciduntdunt Lorem  em ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
+                    <p class="small_text_summary">Lorem ipsum dciduntdunt Lorem em ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
                 </div>
+                <!-- Modal Trigger -->
+                <a class="btn_margin waves-effect waves-light btn modal-trigger blue-grey darken-2 white-text" href="#modal1">Ver más datos.</a>
+
+            </div> <!-- end clash-card empleado-->
+
+        </div> <!-- end wrapper -->
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal modal bottom-sheet">
+            <div class="modal-content">
                 <div class="clash-card__unit-description black-text left-align">
                     <div class="clash-card__unit-name truncate">Sueldo deseado.</div>
                     <p class="flow-text">$10,000.</p>
@@ -49,7 +58,7 @@ ofertasPublicadasPrevioSwipe.php
                 </div>
                 <div class="clash-card__unit-description black-text left-align">
                     <div class="clash-card__unit-name truncate">Habilidades adicionales.</div>
-                    <p class="small_text_summary">Lorem ipsum dciduntdunt Lorem  em ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
+                    <p class="small_text_summary">Lorem ipsum dciduntdunt Lorem em ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
                 </div>
                 <div class="clash-card__unit-description black-text left-align">
                     <div class="clash-card__unit-name truncate">Correo electrónico.</div>
@@ -61,99 +70,15 @@ ofertasPublicadasPrevioSwipe.php
                 </div>
                 <div class="clash-card__unit-description black-text left-align">
                     <div class="clash-card__unit-name truncate">Redes sociales.</div>
-                    <p class="small_text_social_media">Facebook:<span class="small_text_social_media_name">  Name_social_media</span></p>
-                    <p class="small_text_social_media">Twitter:<span class="small_text_social_media_name">  Name_social_media</span></p>
-                    <p class="small_text_social_media last_social_media">Skype:<span class="small_text_social_media_name">  Name_social_media</span></p>
+                    <p class="small_text_social_media">Facebook:<span class="small_text_social_media_name"> Name_social_media</span></p>
+                    <p class="small_text_social_media">Twitter:<span class="small_text_social_media_name"> Name_social_media</span></p>
+                    <p class="small_text_social_media last_social_media">Skype:<span class="small_text_social_media_name"> Name_social_media</span></p>
                 </div>
-
-            </div> <!-- end clash-card empleado-->
-
-        </div> <!-- end wrapper -->
-    </div>
-    <!-- Primer item -->
-    <div class="margin-down-bigger elementoSwipePadre">
-
-        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
-        <div class="wrapper">
-
-            <div class="clash-card empleado">
-                <div class="clash-card__image clash-card__image--empleado">
-                    <img src="pictures/personas/peter.jpg" class="card_image_empleado">
-                </div>
-                <div class="buttonContainerEvaluate z-depth-3">
-                    <div id="aceptaButton" class="buttonEvaluate waves-effect waves-green"><img src="icons/check.svg"></div>
-                    <div id="rechazaButton" class="buttonEvaluate waves-effect waves-red"><img src="icons/cross.svg"></div>
-                </div>
-                <div class="clash-card__unit-description black-text left-align">
-                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
-                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
-                </div>
-                <div class="clash-card__unit-description black-text left-align">
-                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
-                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
-                </div>
-
-            </div> <!-- end clash-card empleado-->
-
-        </div> <!-- end wrapper -->
-
-    </div>
-
-
-    <!-- Primer item -->
-    <div class="margin-down-bigger elementoSwipePadre">
-        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
-        <div class="wrapper">
-
-            <div class="clash-card empleado">
-                <div class="clash-card__image clash-card__image--empleado">
-                    <img src="pictures/personas/pedro.jpg" class="card_image_empleado">
-                </div>
-                <div class="buttonContainerEvaluate z-depth-3">
-                    <div id="aceptaButton" class="buttonEvaluate waves-effect waves-green"><img src="icons/check.svg"></div>
-                    <div id="rechazaButton" class="buttonEvaluate waves-effect waves-red"><img src="icons/cross.svg"></div>
-                </div>
-                <div class="clash-card__unit-description black-text left-align">
-                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
-                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
-                </div>
-                <div class="clash-card__unit-description black-text left-align">
-                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
-                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
-                </div>
-
-            </div> <!-- end clash-card empleado-->
-
-        </div> <!-- end wrapper -->
-
-    </div>
-
-    <!-- Primer item -->
-    <div class="margin-down-bigger elementoSwipePadre">
-        <div class="idDisplay z-depth-4">IPNEMAPDDANSD</div>
-        <div class="wrapper">
-
-            <div class="clash-card empleado">
-                <div class="clash-card__image clash-card__image--empleado">
-                    <img src="pictures/personas/vicky.jpg" class="card_image_empleado">
-                </div>
-                <div class="buttonContainerEvaluate z-depth-3">
-                    <div id="aceptaButton" class="buttonEvaluate waves-effect waves-green"><img src="icons/check.svg"></div>
-                    <div id="rechazaButton" class="buttonEvaluate waves-effect waves-red"><img src="icons/cross.svg"></div>
-                </div>
-                <div class="clash-card__unit-description black-text left-align">
-                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
-                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
-                </div>
-                <div class="clash-card__unit-description black-text left-align">
-                    <div class="clash-card__unit-name truncate">Descripción ejemplo.</div>
-                    <p class="flow-text">Lorem ipsum dolor sit. Totam ipsum voluptatem eveniet inventore quis est, perspiciatis incidunt</p>
-                </div>
-
-            </div> <!-- end clash-card empleado-->
-
-        </div> <!-- end wrapper -->
-
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect blue darken-3 white-text btn-flat">Cerrar</a>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -173,7 +98,7 @@ ofertasPublicadasPrevioSwipe.php
         rehacer.classList.remove("buttonHide");
     }
 
-    function borrarRetorno(){
+    function borrarRetorno() {
         acepto.classList.remove("buttonHide");
         rechaza.classList.remove("buttonHide");
         rehacer.classList.add("buttonHide");

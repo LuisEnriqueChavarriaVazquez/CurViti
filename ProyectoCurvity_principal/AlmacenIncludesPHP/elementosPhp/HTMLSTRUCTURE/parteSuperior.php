@@ -19,12 +19,15 @@
     <link rel="stylesheet" href="style/cardsSwipe.css">
     <link rel="stylesheet" href="style/barraCarga.css">
     
+    
     <!--Define fuentes e iconos-->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Define archivos del carousel-->
-    <link rel="stylesheet" href="codigos_terceros_carousel_SWIPE/owl.carousel.min.css">
-    <link rel="stylesheet" href="codigos_terceros_carousel_SWIPE/owl.theme.default.css">
+
+    <!--Define archivos del carousel ((Descontinuado))-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!--<link rel="stylesheet" href="codigos_terceros_carousel_SWIPE/owl.carousel.min.css">
+    <link rel="stylesheet" href="codigos_terceros_carousel_SWIPE/owl.theme.default.css">-->
 </head>
 
 <body class="blue-grey lighten-5">
