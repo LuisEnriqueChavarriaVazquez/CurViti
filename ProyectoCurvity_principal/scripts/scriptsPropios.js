@@ -29,28 +29,19 @@ $(document).ready(function () {
     });
 
     //Codigo del buscador (Desplegar elementos)
-    var consulta = $("#searchTable").DataTable();
+    var consulta = $(".search-table").DataTable();
 
-    $("#inputBusqueda").keyup(function () {
+    $(".input-search").keyup(function () {
         consulta.search($(this).val()).draw();
 
-        $("header").css({
-            "height": "100vh",
-            "background": "rgba(0,0,0,0.5)"
-        })
 
-        if ($("#inputBusqueda").val() == "") {
-            $("header").css({
-                "height": "auto",
-                "background": "none"
-            })
-
-            $("#search").hide()
-
+        if ($(".input-search").val() == "") {
+            $(".search-table").hide();
         } else {
-            $("#search").fadeIn("fast");
-        }
-    })
+            $(".search-table").fadeIn();
+        };
+
+    });
 
 
 });
