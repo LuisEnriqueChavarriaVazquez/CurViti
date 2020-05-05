@@ -1,24 +1,3 @@
-<!--Aqui tenemos nuestro navbar-->
-<nav class="nav-extended  light-blue darken-4 stickyNavbar">
-    <div class="nav-wrapper">
-        <a href="#" data-target="slide-out" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
-        <p class="textNavbar">Pagina principal.</p>
-    </div>
-    <div class="nav-content">
-        <div class="nav-wrapper">
-            <form>
-                <div class="input-field">
-                    <input id="search" class="input-search" type="search" required autocomplete="off">
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-                </div>
-            </form>
-        </div>
-    </div>
-</nav>
-
-
-
 <!--Menu del sidenav-->
 
 <ul id="slide-out" class="sidenav colorContrast">
@@ -37,3 +16,24 @@
     <li><a href="#!" class="textColor"><i class="material-icons">star</i>Valore nuestra app.</a></li>
     <li><a href="#!" class="textColor"><i class="material-icons">directions_run</i>Cerrar sesi&oacute;n.</a></li>
 </ul>
+
+
+<!--Aqui tenemos nuestro navbar-->
+<nav class="nav-extended  light-blue darken-4 stickyNavbar">
+    <div class="nav-wrapper">
+        <a href="#" data-target="slide-out" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
+        <p class="textNavbar">Pagina principal.</p>
+    </div>
+    <div class="nav-content">
+        <div class="nav-wrapper">
+            <form>
+                <div class="input-field">
+                    <input id="search" class="input-search" type="search" required autocomplete="off">
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </div>
+
+

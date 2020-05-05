@@ -60,9 +60,8 @@ tbody tr td a:hover{
 	margin: auto;
 	background: #fff;
 	opacity: .95;
-	padding: 0 10px;
-	padding-bottom: 5px;
 	display: none;
+	position: fixed;
 }
 
 .element-table{
@@ -73,11 +72,47 @@ tbody tr td a:hover{
 tbody tr td a{
 	text-decoration: none;
 	font-size: 15px;
-	color: #737373;
-	display: block;
+	color: #494949;
+	font-weight: 900;
 	width: 100%;
+	
+	
+	margin: 0px;
+	padding: 0px 0px 0px 20px;
+	height: 40px;
+	
+	display: flex;
+	justify-content: right;
+    align-items: center;
+}
+
+tbody tr td{
+	padding: 0;
+	margin: 0;
+	height: 20px;
+	position: relative;
 	height: 100%;
 }
+
+tbody tr{
+	height: 20px;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	border-collapse: collapse;
+}
+
+
+.positionTable{
+	position: relative;
+	top: -10px;
+	z-index: -3;
+}
+
+.title-table{
+	display: none;
+}
+
 
 .dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate{
 	display: none;
