@@ -12,14 +12,14 @@
     background-image: url(../pictures/cardInicio.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
-
-
 /*Card para la parte de los registros*/
 .backgroundCardForm{
     background-image: url(../pictures/formCard.png);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .sizeCardForm{
@@ -37,6 +37,7 @@
     background-image: url(../pictures/registroTerminado.png);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .titleFinal, .textFinal{
