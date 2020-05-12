@@ -95,7 +95,7 @@
    if($contadorEleConfimados==6){
       $servername = "localhost";
       $username = "root";
-      $password = "ramv1357";
+      $password = "";
       $dbname = "Curvity";
 
       $conn = new mysqli($servername, $username, $password, $dbname);
