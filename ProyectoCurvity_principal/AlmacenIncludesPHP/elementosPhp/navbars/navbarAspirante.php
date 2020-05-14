@@ -13,7 +13,7 @@
     </li>
     <li><a href="editarPerfilAspirante.php" class="textColor"><i class="material-icons">account_circle</i>Editar perfil.</a></li>
     <li><a href="consultarEstadoDeSolicitud.php" class="textColor"><i class="material-icons">hearing</i>Lista de ofertas enviadas.</a></li>
-    <li><a href="#!" class="textColor"><i class="material-icons">directions_run</i>Cerrar sesi&oacute;n.</a></li>
+    <li><a href="includes/logout.php" class="textColor"><i class="material-icons">directions_run</i>Cerrar sesi&oacute;n.</a></li>
 </ul>
 
 
