@@ -1,7 +1,7 @@
 <?php include 'AlmacenIncludesPHP/elementosPhp/HTMLSTRUCTURE/parteSuperior.php' ?>
 
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInicialRetornoSuperior.php' ?>
-<!--Nombre del archivo PHP donde estaban las ofertas de cierta empresa-->
+operacionesAspirante.php
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInicialRetornoInferior.php' ?>
 
 
