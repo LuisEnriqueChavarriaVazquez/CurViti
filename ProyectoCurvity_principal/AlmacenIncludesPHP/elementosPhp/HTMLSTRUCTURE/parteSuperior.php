@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style/cardsSwipe.css">
     <link rel="stylesheet" href="style/barraCarga.css">
     <link rel="stylesheet" href="style/cardOferta.css">
+    <link rel="stylesheet" href="style/stateCard.css">
     <link rel="stylesheet" href="style/elementosBuscador.css">
     
     
