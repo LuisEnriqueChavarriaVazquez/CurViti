@@ -17,6 +17,7 @@ signUpEmpresa.php
                     <textarea placeholder="Escriba descripci&oacute;n de la empresa" id="descripcion_empresa" class="materialize-textarea white-text" data-length="200"></textarea>
                     <label for="descripcion_empresa">Descripci&oacute;n.</label>
                 </div>
+                <br><br><br>
                 <!--Foto de perfil-->
                 <div class="file-field input-field">
                     <div class="btn white blue-text text-darken-4">
