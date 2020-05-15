@@ -111,4 +111,12 @@ $(document).ready(function () {
     $(acepto[15]).click(function () { $("#idAcepto" + 15).addClass("buttonHide"); $("#idRechazo" + 15).addClass("buttonHide"); $("#idRehacer" + 15).removeClass("buttonHide"); });$(rechaza[15]).click(function () { $("#idAcepto" + 15).addClass("buttonHide"); $("#idRechazo" + 15).addClass("buttonHide"); $("#idRehacer" + 15).removeClass("buttonHide"); });$(rehacer[15]).click(function () { $("#idAcepto" + 15).removeClass("buttonHide"); $("#idRechazo" + 15).removeClass("buttonHide"); $("#idRehacer" + 15).addClass("buttonHide"); });
 
 
+    $(function(){
+        //Agrega el evento click a todos los elementos que tengan la clase "item"
+        $(".acepto").on("click", function( a ){
+            alert( "Hola: "
+            )
+        })
+    })
+
 });

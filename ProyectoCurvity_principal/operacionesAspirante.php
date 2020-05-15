@@ -13,7 +13,7 @@
 
       <tbody>
         <tr>
-          <td><a href="operacionesAspirante.php">Palabra 1</a></td>
+          <td><a href="operacionesAspirante.php">Mesera</a></td>
         </tr>
         <tr>
           <td><a href="operacionesAspirante.php">Ingeniero en sistemas</a></td>
