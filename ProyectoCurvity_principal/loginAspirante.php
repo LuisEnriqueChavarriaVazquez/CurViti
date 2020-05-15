@@ -9,11 +9,6 @@ login.php
         <form class="col s12" method="POST">
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix white-text">account_circle</i>
-                    <input id="id_usuario" type="text" class="validate white-text">
-                    <label for="id_usuario" class="white-text">Id de usuario.</label>
-                </div>
-                <div class="input-field col s12">
                     <i class="material-icons prefix white-text">email</i>
                     <input id="email" name="username" type="email" class="validate white-text">
                     <label for="email" class="white-text">Email.</label>
