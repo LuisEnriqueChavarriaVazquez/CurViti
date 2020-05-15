@@ -22,7 +22,7 @@
 
   > La carpeta de vistas se agrega con la finalidad de que si requieren un guia para ver como es el diseño de la APP lo puedan revisar dentro de este mismo repo (AUNQUE NO SEA CÓDIGO)
 
-- **Carpeta del documento para entregar a Dorantes.**
+- **Carpeta del documento para entregar**
 
   > Es vital que tengamos acceso a la documentación con el fin de que **si necesitamos un guia** lo podamos encontrar **dentro de este repositorio.**
 
@@ -30,5 +30,7 @@
 
 <img src="Vistas_app\logo\plan.png" alt="plan" />
 
+<h1>FLOW</h1>
 
+<img src="Vistas_app\expoAvances\flow.jpg" alt="plan" />
 
