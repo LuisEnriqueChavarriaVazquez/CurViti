@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="style/cardOferta.css">
     <link rel="stylesheet" href="style/stateCard.css">
     <link rel="stylesheet" href="style/elementosBuscador.css">
+    <link rel="stylesheet" href="style/estilosVistaEmpresa.css">
     
     
     <!--Define fuentes e iconos-->

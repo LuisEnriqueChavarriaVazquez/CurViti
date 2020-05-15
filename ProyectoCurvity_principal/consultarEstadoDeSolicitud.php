@@ -17,13 +17,13 @@ operacionesAspirante.php
         <div class="col s12 stateResult">Aceptado</div>
     </div>
 
-    <!--PRIMERA CARD-->
+    <!--SEGUNDA CARD-->
     <div class="stateCard row z-depth-4">
         <div class="col s12 stateTextContainer stateText truncate">Actor.</div>
         <div class="col s12 stateResult">Rechazado</div>
     </div>
 
-    <!--PRIMERA CARD-->
+    <!--TERCERA CARD-->
     <div class="stateCard row z-depth-4">
         <div class="col s12 stateTextContainer stateText truncate">Chef.</div>
         <div class="col s12 stateResult">Pendiente</div>
