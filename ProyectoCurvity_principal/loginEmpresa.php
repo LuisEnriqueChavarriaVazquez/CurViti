@@ -7,7 +7,7 @@ login.php
 
 <div class="boxSubjectsInicio light-blue darken-4 centerElements">
     <div class="sizeCardInicio backgroundCardInicio centerElements borderCardInicio z-depth-3">
-        <form class="col s12">
+        <form class="col s12" method="POST">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix white-text">email</i>
@@ -16,7 +16,7 @@ login.php
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix white-text">lock</i>
-                    <input id="password" name="username_emp" type="password" class="validate white-text">
+                    <input id="password" name="password_emp" type="password" class="validate white-text">
                     <label for="password" class="white-text">Password.</label>
                 </div>
             </div>

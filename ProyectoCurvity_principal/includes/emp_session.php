@@ -5,11 +5,11 @@ class EmpSession{
         session_start();
     }
 
-    public function setCurrentUser($user){
+    public function setCurrentEmp($user){
         $_SESSION['user'] = $user;
     }
 
-    public function getCurrentUser(){
+    public function getCurrentEmp(){
         return $_SESSION['user'];
     }
 

@@ -6,7 +6,7 @@ class Emp extends DB{
     private $username;
 
 
-    public function userExists($user, $pass){
+    public function empExists($user, $pass){
         $query = $this->connect()->prepare('SELECT * FROM empresa WHERE Email = :user AND Contra = :pass');
         $query->execute(['user' => $user, 'pass' => $pass]);
 
@@ -17,17 +17,17 @@ class Emp extends DB{
         }
     }
 
-    public function setUser($user){
+    public function setEmp($user){
         $query = $this->connect()->prepare('SELECT * FROM empresa WHERE Email = :user');
         $query->execute(['user' => $user]);
         
-        foreach ($query as $currentUser) {
-            $this->nombre = $currentUser['Nombre'];
-            $this->username = $currentUser['Email'];
+        foreach ($query as $currentEmp) {
+            $this->nombre = $currentEmp['Nombre'];
+            $this->username = $currentEmp['Email'];
         }
     }
 
-    public function getNombre(){
+    public function getEmp(){
         return $this->nombre;
     }
 }
