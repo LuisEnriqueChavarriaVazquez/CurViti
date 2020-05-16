@@ -1,3 +1,7 @@
+<?php
+include_once 'includes/empresa.php';
+include_once 'includes/emp_session.php';
+?>
 <?php include 'AlmacenIncludesPHP/elementosPhp/HTMLSTRUCTURE/parteSuperior.php' ?>
 
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbars/navbarEmpresa.php' ?>
@@ -5,6 +9,7 @@
 <!--Cuerpo de las secciones-->
 <div class="boxSubjects blue-grey lighten-5">
     <p class="titles">Operaciones empresa.</p>
+    <h1>Bienvenido <?php echo $emp->getEmp();  ?></h1>
 
     <a href="gestionSedes.php">
         <?php include 'AlmacenIncludesPHP/elementosPhp/cardOperaciones/cardOperacionesSuperior.php'; ?>
