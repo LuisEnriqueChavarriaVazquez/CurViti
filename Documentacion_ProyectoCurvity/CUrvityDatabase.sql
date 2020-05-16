@@ -10,7 +10,7 @@ FotoPerfil longblob);
 
 create table if not exists Empresa
 (IDEmpresa int AUTO_INCREMENT primary key , Nombre varchar (30),RazonSocial varchar(30), Contra varchar(30),
-Direccion varchar(30),Tipo varchar(30), Telefono varchar(30),
+Direccion varchar(30),Tipo varchar(90), Telefono varchar(30),
 DireccionWeb varchar (30),FacebookEmpresa varchar(30) default 'Ninguno' ,SkypeEmpresa varchar(30) default 'Ninguno' ,
 TwitterEmpresa varchar(30) default 'Ninguno',FotoLogo longblob);
 
