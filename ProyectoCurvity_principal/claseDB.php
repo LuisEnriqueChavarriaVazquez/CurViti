@@ -1,31 +1,28 @@
 <?php
-
-class objetoConexionBaseDatos{
-
-    private const $nombreServidor="localhost";
-    private const $nombreUsuario="root";
-    private const $passwordDB="ramv1357";
-    private const $nombreDB="Curvity";
-    private $conector=null;
-
+class objetoConexionBaseDatos {
+    public $nombreServer="localhost";
+    public $nombreUsuario="root";
+    public $passwordDB="ramv1357";
+    public $nombreDB="Curvity";
+    public $conector=null;
+     
     public function __construct(){
-        $conexionResutado=false;
-        $this->conector = mysqli_connect($this->nombreServidor, $this->nombreUsuario, $this->passwordDB);
-        if ( $this->conector) {
-          $conexionResutado=true;
-        }else{
-          $conexionResutado=false;
-        }
+         try{
+            $this->conector = new mysqli($this->nombreServer,$this->nombreUsuario,$this->passwordDB,$this->nombreDB);
+            return true;
+         }catch(Exception $e){
+            return false;
+         }
     }
 
     public function comprobarConexion(){
         $conexionResutado=false;
-        if ( $this->conector) {
-            $conexionResutado=true;
-          }else{
-            $conexionResutado=false;
-          }
-
+        if($this->conector->connect_error) {
+         $conexionResutado=false;
+       }else{
+         $conexionResutado=true;
+       }
+     return $conexionResutado;
     }
    
    public function validarTextoNormal ($StringEntrada){
@@ -34,6 +31,7 @@ class objetoConexionBaseDatos{
       }else{
          return True;
       }
+   }
 
   public function validarMail ($StringEntrada){
     if(empty($StringEntrada) || trim($StringEntrada)== ""){
@@ -43,9 +41,10 @@ class objetoConexionBaseDatos{
     }else{
        return True;
     }
+   }
 
 
-    function validarNumeroEntero ($StringEntrada){
+   public function validarNumeroEntero ($StringEntrada){
       if(empty($StringEntrada) || trim($StringEntrada)== ""){
          return False;
       }elseif(!preg_match("/^[0-9]+$/",$StringEntrada)){
@@ -55,7 +54,7 @@ class objetoConexionBaseDatos{
       }
    }
 
-   public function validarNumeroFlotante ($StringEntrada){
+  public  function validarNumeroFlotante ($StringEntrada){
     if(empty($StringEntrada) || trim($StringEntrada)== ""){
        return False;
     }elseif(!preg_match("/^[0-9]+(.([0-9]+))?$/",$StringEntrada)){
@@ -65,7 +64,7 @@ class objetoConexionBaseDatos{
     }
  }
 
-   public  function validarImagen($ImagenEntrada){
+ public function validarImagen($ImagenEntrada){
     $allowed_extensions = array("jpg","jpeg","png");
     $listaValores=explode('.',$ImagenEntrada);
     if( in_array($listaValores[count($listaValores)-1],$allowed_extensions)){
@@ -74,9 +73,16 @@ class objetoConexionBaseDatos{
        return False;
     }
    }
+
+   public function elementoRepetido($NombreTabla,$NombreAtributo,$NombreElemento){
+      $sqlSentence="select * from ".$NombreTabla. " where ".$NombreAtributo."=".$NombreElemento;
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
+         return true;
+      }else{
+         return false;
+      }
+   }
     
-
 }
-
-
 ?>

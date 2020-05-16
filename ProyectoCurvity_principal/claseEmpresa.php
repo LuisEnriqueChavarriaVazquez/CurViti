@@ -1,7 +1,9 @@
 <?php
+   require("claseDB.php");
 
-   class Empresa extends  objetoConexionBaseDatos{
+   class Empresa {
        public $nombre;
+       public $password;
        public $razonSocial;
        public $direccion;
        public $tipo;
@@ -10,17 +12,18 @@
        public $facebookEmpresa;
        public $skypeEmpresa;
        public $twitterEmpresa;
+       public $objetoDB;
 
-       public function __construct($nombreEntrada,$razonSocialEntrada,$direccionEntrada,$tipoEntrada,$telefonoEntrada,$direccionWebEntrada,$facebokEmpresaEntrada,$skypeEmpresaEntrada,$twitterEmpresaEntrada){
+       public function __construct($nombreEntrada,$passwordEntrada,$razonSocialEntrada,$direccionEntrada,$tipoEntrada,$telefonoEntrada,$direccionWebEntrada){
             $this->nombre=$nombreEntrada;
+            $this->password=$passwordEntrada;
             $this->razonSocial=$razonSocialEntrada;
             $this->direccion=$direccionEntrada;
             $this->tipo=$tipoEntrada;
             $this->telefono=$telefonoEntrada;
             $this->direccionWeb=$direccionEntrada;
-            $this->facebookEmpresa=$facebokEmpresaEntrada;
-            $this->skypeEmpresa=$skypeEmpresaEntrada;
-            $this->twitterEmpresa=$skypeEmpresaEntrada;
+            $this->objetoDB=new  objetoConexionBaseDatos();
+            
        }
 
        public function setNombre($StringEntrada){
@@ -31,14 +34,14 @@
            return $this->nombre;
        }
 
-       public function setRazonSocial($StringEntrada){
-        $this->razonSocial=$StringEntrada;
-      }    
-
-        public function getRazonSocial(){
-        return $this->razonSocial;
+       public function setPassword($StringEntrada){
+             $this->password=$StringEntrada;
        }
-       
+
+       public function getpassword(){
+           return $this->password;
+       }
+
        public function setRazonSocial($StringEntrada){
         $this->razonSocial=$StringEntrada;
       }    
@@ -71,7 +74,7 @@
            return $this->telefono;
        }
 
-       public function setDireccionWeb($StringEntrada)){
+       public function setDireccionWeb($StringEntrada){
            $this->direccionWeb=$StringEntrada;
        }
        
@@ -98,7 +101,35 @@
        public function setTwitterEmpresa($StringEntrada){
            $this->twitterEmpresa;
        }
-
+       
+       public function ingresarNuevaEmpresa($FotoLogo){
+        $fileFoto=addslashes(file_get_contents($FotoLogo));
+         $sqlScriptParam="insert into Empresa(Nombre,Contra,RazonSocial,Direccion,Tipo,Telefono,DireccionWeb,FotoLogo";
+         $sqScriptVal=" values('".$this->nombre."','".$this->password."','".$this->razonSocial."',
+         '".$this->direccion."','".$this->tipo."','".$this->telefono."','".$this->direccionWeb."','$fileFoto'";
+         if(isset($this->facebookEmpresa)){
+            $sqlScriptParam= $sqlScriptParam.",FacebookEmpresa";
+            $sqScriptVal= $sqScriptVal.",'".$this->facebookEmpresa."'";
+         }
+         if(isset($this->skypeEmpresa)){
+            $sqlScriptParam= $sqlScriptParam.",SkypeEmpresa";
+            $sqScriptVal= $sqScriptVal.",'".$this->skypeEmpresa."'";
+         }
+         if(isset($this->twitterEmpresa)){
+            $sqlScriptParam= $sqlScriptParam.",TwitterEmpresa";
+            $sqScriptVal= $sqScriptVal.",'".$this->twitterEmpresa."'";
+         }
+         $sqlScriptParam= $sqlScriptParam.") ";
+         $sqScriptVal= $sqScriptVal.") ";
+         $sqlScript=$sqlScriptParam.$sqScriptVal;
+       if( $this->objetoDB->conector->query($sqlScript) === TRUE){
+            return true;
+         }else{
+          return false;
+         }
+        
+         
+       }     
        
    }
 

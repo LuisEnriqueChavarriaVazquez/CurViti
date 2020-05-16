@@ -12,8 +12,6 @@
    $nombreImagenPerfilAsp=$_FILES["archivo_aspirante"]["name"];
    $contadorEleConfimados=0;
    
-  
-   
 
   function validacionImagen($ImagenEntrada){
    $allowed_extensions = array("jpg","jpeg","png");
@@ -59,7 +57,7 @@
    }else{
      $contadorEleConfimados++;
   }
- validacionImagen($nombreImagenPerfilAsp);
+
 
   if(!validacionNormal($habiliAsp)){
    $habilidades_error="Llene el apartado de habilidades";
@@ -95,7 +93,7 @@
    if($contadorEleConfimados==6){
       $servername = "localhost";
       $username = "root";
-      $password = "";
+      $password = "ramv1357";
       $dbname = "Curvity";
 
       $conn = new mysqli($servername, $username, $password, $dbname);

@@ -39,10 +39,10 @@ index.php
         <p class="white-text textCardInicioSamll centerElements">Datos b&aacute;sicos empresa.</p>
     </div>
     <div class="sizeCardForm backgroundCardForm borderCardInicio z-depth-3">
-        <form class="col s12">
+        <form class="col s12" method="post" action="validarPrimParteRegistroEmpresa.php">
             <div class="row">
                 <div class="input-field col s12">
-                    <input placeholder="Escriba el nombre de la empresa." id="nombre_empresa" type="text"
+                    <input placeholder="Escriba el nombre de la empresa." id="nombre_empresa" name="nombre_empresa"  type="text"
                     value="<?php 
                      echo  htmlspecialchars ($nombreEmpresa)
                     ?>"  class="validate white-text">
@@ -53,7 +53,7 @@ index.php
                       } ?>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="Escriba la razon social de la empresa." id="first_name" type="text"
+                    <input placeholder="Escriba la razon social de la empresa." id="razon_Social" name="razon_Social" type="text"
                     value="<?php 
                      echo  htmlspecialchars ($razonSocialEmpresa)
                     ?>" class="validate white-text">
@@ -64,7 +64,7 @@ index.php
                       } ?>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="Email del admin de empresa." id="first_name" type="email" 
+                    <input placeholder="Email del admin de empresa." id="email_empresa" name="email_empresa" type="email" 
                     value="<?php 
                      echo  htmlspecialchars ($emailEmpresa)
                     ?>" 
@@ -76,7 +76,7 @@ index.php
                       } ?>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="Escriba su passoword." id="password" type="password"
+                    <input placeholder="Escriba su password." id="password_empresa" name="password_empresa" type="password"
                     value="<?php 
                      echo  htmlspecialchars ($passwordEmpresa)
                     ?>" class="validate white-text">
@@ -87,10 +87,9 @@ index.php
                       } ?>
                 </div>
                 <div class="input-field col s12">
-                    <textarea placeholder="Escriba la dirección" id="direccion_sede" class="materialize-textarea white-text" data-length="200">"<?php 
+                    <textarea placeholder="Escriba la dirección" id="direccion_empresa" name="direccion_empresa" class="materialize-textarea white-text" data-length="200"><?php 
                      echo  htmlspecialchars ($direccionEmpresa)
-                    ?>"        
-                    </textarea>
+                    ?></textarea>
                     <label for="direccion_sede">Direccion principal de la empresa.</label>
                     <?php
                        if(isset($direccionEmpresa_error)){
@@ -98,7 +97,7 @@ index.php
                       } ?>
                 </div>
                 <div class="input-field col s12">
-                    <select class="white-text">
+                    <select class="white-text" name="tipo_empresa" id="tipo_empresa">
                         <option value="" <?php
                           if($tipoEmpresa==""){
                               echo "selected";
@@ -207,11 +206,16 @@ index.php
                         ?>>Agrupación de interés económico.</option>
                     </select>
                     <label>Tipo de empresa</label>
+                    <?php
+                       if(isset($tipoEmpresa_error)){
+                       echo  "<p class='white-text'>".$tipoEmpresa_error."</p>";
+                      } ?>
                 </div>
             </div>
-        </form>
+       
     </div>
-    <a href="signUpEmpresa2.php"><button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Siguiente.</button></a>
+    <a ><button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Siguiente.</button></a>
+    </form>
 </div>
 
 
