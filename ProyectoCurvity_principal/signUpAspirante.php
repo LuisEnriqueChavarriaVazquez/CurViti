@@ -198,22 +198,22 @@ index.php
                     </select>
                     <label>Nivel Acad&eacute;mico</label>
                     <?php
-                       if(isset($nivelAcad_error)){
-                           echo "<p class='white-text'>".$nivelAcad_error."</p>";
-                       }
+                        if(isset($nivelAcad_error)){
+                            echo "<p class='white-text'>".$nivelAcad_error."</p>";
+                        }
                     ?>
                 </div>
 
                 <div class="input-field col s12">
                     <textarea placeholder="Escriba la dirección" id="direccion_aspirante" name="direccion_aspirante"
                      class="materialize-textarea white-text" data-length="200"><?php 
-                     echo  htmlspecialchars ($direccionAs)
+                      echo  htmlspecialchars ($direccionAs)
                     ?></textarea>
                     <label for="direccion_aspirante">Direccion donde recide.</label>
                     <?php
-                       if(isset($direccion_error)){
-                           echo "<p class='white-text'>".$direccion_error."</p>";
-                       }
+                        if(isset($direccion_error)){
+                            echo "<p class='white-text'>".$direccion_error."</p>";
+                        }
                     ?>
                 </div>
 
@@ -229,7 +229,7 @@ index.php
                            echo "<p class='white-text'>".$tel_error."</p>";
                        }
                     ?>
-                </div>
+                </div> 
 
                 <div class="input-field col s12">
                     <input placeholder="Escriba la red social" id="facebook" name="facebook"
