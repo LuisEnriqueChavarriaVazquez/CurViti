@@ -11,12 +11,11 @@ if(isset($_SESSION['user'])){
     $dato=$user->getCorreo();
     $c=new conectar();
     $conexion=$c->conexion();
-    
-    $sql="SELECT *from aspirante where CorreoElec='$dato'";
+
+    $sql="SELECT *from Aspirante where CorreoElec='$dato'";
     $result=mysqli_query($conexion,$sql);
-
-    /*$ver=mysqli_fetch_row($result);
-
+    
+/*
     $datos=array(
                     'IDAspirante'=>$ver[0],
                     'Nombre'=>$ver[1],
@@ -128,19 +127,16 @@ index_asp.php
         $sueldoAsp="";
     }
 ?>
-<body onload="asignar();">
 <div  class="boxSubjectsInicioExtended light-blue darken-4 centerElements">
     <div class="sizeCardInicioSmall backgroundCardInicio borderCardInicio z-depth-3">
-        <p class="white-text textCardInicioSamll centerElements">Datos editables. Bienvenido <?php echo $dato;  ?></p>
+        <p class="white-text textCardInicioSamll centerElements">Datos editables.</p>
     </div>
     <div class="sizeCardForm backgroundCardForm borderCardInicio z-depth-3">
-        <form class="col s12">
-                <div class="input-field col s12">
+        <form class="col s12" method="post" action="validarUpdateAspirante.php">
+        <?php while($datos=mysqli_fetch_row($result)): ?>
+                <div class="input-field col s12"> 
                     <input placeholder="Escriba su nombre." id="nombre_aspirante" name="nombre_aspirante" 
-                    value="<?php 
-                    echo  htmlspecialchars ($nombreAs)
-                    ?>" 
-                    type="text" class="validate white-text">
+                    value="<?php echo $datos[1]?>"  type="text" class="validate white-text">
                     <label for="nombre_aspirante">Nombre.</label>
                     <?php
                         if(isset($Nombre_error)){
@@ -149,10 +145,7 @@ index_asp.php
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba el apellido paterno." id="apellido_paterno" name="apellido_paterno"
-                    value="<?php 
-                    echo  htmlspecialchars ($apelPatAs)
-                    ?>" 
-                    type="text" class="validate white-text">
+                    value="<?php echo $datos[3] ?>" type="text" class="validate white-text">
                     <label for="apellido_paterno">Apellido paterno.</label>
                     <?php
                     if(isset($apPaterno_error)){
@@ -161,9 +154,7 @@ index_asp.php
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba el apellido materno." id="apellido_materno" name="apellido_materno" 
-                    value="<?php 
-                    echo  htmlspecialchars ($apelMatAs)
-                    ?>" 
+                    value="<?php echo $datos[4] ?>" 
                     type="text" class="validate white-text">
                     <label for="apellido_materno">Apellido  materno.</label>
                     <?php
@@ -174,10 +165,7 @@ index_asp.php
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba su email." id="mail" name="mail"
-                    value="<?php 
-                        echo  htmlspecialchars ($mailAs)
-                    ?>" 
-                    type="email" class="validate white-text">
+                    value="<?php echo $datos[9] ?>" type="email" class="validate white-text">
                     <label for="first_name">Email.</label>
                     <?php
                         if(isset($mail_error)){
@@ -186,7 +174,8 @@ index_asp.php
                     ?>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="Cree su password de CURVITY." id="password" name="password" type="password" class="validate white-text">
+                    <input placeholder="Cree su password de CURVITY." id="password" name="password" type="password" class="validate white-text" 
+                    value="<?php echo $datos[2] ?>">
                     <label for="password">Password.</label>
                     <?php
                         if(isset($password_error)){
@@ -211,9 +200,7 @@ index_asp.php
 
                 <div class="input-field col s12">
                     <input placeholder="Escriba su escuela de procedencia." id="alama_mater" name="alama_mater"
-                    value="<?php 
-                        echo  htmlspecialchars ($escuelaAs)
-                    ?>" type="text" class="validate white-text">
+                    value="<?php echo $datos[7] ?>" type="text" class="validate white-text">
                     <label for="alma_mater">Alma mater.</label>
                     <?php
                         if(isset($escuela_error)){
@@ -270,9 +257,7 @@ index_asp.php
 
                 <div class="input-field col s12">
                     <textarea placeholder="Escriba la dirección" id="direccion_aspirante" name="direccion_aspirante"
-                    class="materialize-textarea white-text" data-length="200"><?php 
-                    echo  htmlspecialchars ($direccionAs)
-                    ?></textarea>
+                    class="materialize-textarea white-text" data-length="200"><?php echo $datos[6]?></textarea>
                     <label for="direccion_aspirante">Direccion donde recide.</label>
                     <?php
                         if(isset($direccion_error)){
@@ -282,24 +267,18 @@ index_asp.php
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba la red social" id="facebook" name="facebook"
-                    value="<?php 
-                        echo  htmlspecialchars ($facebookAs)
-                    ?>" type="text" class="validate white-text">
+                    value="<?php echo $datos[14] ?>" type="text" class="validate white-text">
                     <label for="facebook_aspirante">(Opcional) Facebook.</label>
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba la red social" id="skype" name="skype" 
-                    value="<?php 
-                        echo  htmlspecialchars ($skypeAs)
-                    ?>"
+                    value="<?php echo $datos[15] ?>"
                     type="text" class="validate white-text">
                     <label for="skype_aspirante">(Opcional) Skype.</label>
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba la red social" id="twitter" name="twitter" 
-                    value="<?php 
-                        echo  htmlspecialchars ($skypeAs)
-                    ?>"
+                    value="<?php echo $datos[16] ?>"
                     type="text" class="validate white-text">
                     <label for="twitter_aspirante">(Opcional) Twitter.</label>
                 </div>
@@ -317,16 +296,15 @@ index_asp.php
                         ?>"
                         type="text">
                         <?php
-                        if(isset($dirArchivo_error)){
-                        echo  "<p class='white-text'>".$dirArchivo_error."</p>";
+                       if(isset($dirArchivo_error)){
+                       echo  "<p class='white-text'>".$dirArchivo_error."</p>";
                         } ?>
                     </div>
+                </div>
                 <br>
                                 <!--Describe tus habilidades-->
                 <div class="input-field col s12">
-                    <textarea placeholder="Habilidades con que cuenta" id="habilidades_aspirante" name="habilidades_aspirante"  class="materialize-textarea white-text" data-length="200"><?php
-                       echo  htmlspecialchars ($habiliAsp)
-                    ?></textarea>
+                    <textarea placeholder="Habilidades con que cuenta" id="habilidades_aspirante" name="habilidades_aspirante"  class="materialize-textarea white-text" data-length="200"><?php echo $datos[11] ?></textarea>
                     <label for="habilidades_aspirante">Habilidades.</label>
                     <?php
                        if(isset($habilidades_error)){
@@ -335,9 +313,7 @@ index_asp.php
                 </div>
 
                 <div class="input-field col s12">
-                    <textarea placeholder="Experiencia laboral." id="experiencia_laboral" name="experiencia_laboral" class="materialize-textarea white-text" data-length="200"><?php
-                        echo  htmlspecialchars ($expAsp)
-                    ?></textarea>
+                    <textarea placeholder="Experiencia laboral." id="experiencia_laboral" name="experiencia_laboral" class="materialize-textarea white-text" data-length="200"><?php echo $datos[10] ?></textarea>
                     <label for="experiencia_laboral">Experiencia laboral.</label>
                     <?php
                        if(isset($experiencia_error)){
@@ -348,9 +324,7 @@ index_asp.php
                 <!--Idiomas que domina-->
                 <div class="input-field col s12">
                     <input placeholder="Cantidad de idiomas." id="cantidad_de_idiomas" name="cantidad_de_idiomas"
-                     value="<?php
-                            echo  htmlspecialchars ($cantidadIdiomasAsp)
-                        ?>"
+                     value="<?php echo $datos[12] ?>"
                      type="text" class="validate white-text truncate">
                     <label for="cantidad_de_idiomas">Cantidad de idiomas que domina.</label>
                     <?php
@@ -360,9 +334,7 @@ index_asp.php
                 </div>
 
                 <div class="input-field col s12">
-                    <textarea placeholder="Idiomas que domina" id="idiomas_domina" name="idiomas_domina" class="materialize-textarea white-text" data-length="200"><?php
-                            echo  htmlspecialchars ($idiomasEspAsp)
-                        ?></textarea>
+                    <textarea placeholder="Idiomas que domina" id="idiomas_domina" name="idiomas_domina" class="materialize-textarea white-text" data-length="200"><?php echo $datos[13] ?></textarea>
                     <label for="idiomas_domina">Cuentenos que idiomas domina.</label>
                     <?php
                        if(isset($idiomasEsp_error)){
@@ -373,9 +345,7 @@ index_asp.php
                 <!--Sueldo ideal-->
                 <div class="input-field col s12">
                     <input placeholder="Ejemplo 30500" id="sueldo_ideal" name="sueldo_ideal"
-                    value="<?php
-                        echo  htmlspecialchars ($sueldoAsp)
-                     ?>"
+                    value="<?php echo $datos[5] ?>"
                      type="text" class="validate white-text truncate">
                     <label for="sueldo_ideal">Sueldo ideal.</label>
                     <?php
@@ -384,25 +354,10 @@ index_asp.php
                         } ?>
                 </div>
             </div>
+            <?php endwhile; ?>
+            <button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Guardar cambios.</button>
         </form>
     </div>
-    <a href="operacionesAspirante.php"><button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Guardar cambios.</button></a>
+    
 </div>
-<script>
-        function asignar(){
-        <?php while($ver=mysqli_fetch_row($result)): ?>
-        var nombre = document.getElementById("nombre_aspirante");
-        var app =document.getElementById("apellido_paterno");
-        var apm=document.getElementById("apellido_materno");
-        var correo=document.getElementById("mail");
-
-        //alert(<?php echo $dato;  ?>);
-        nombre.value ="hola jajaj";
-        /*app.value=$ver[2];
-        apm.value=$ver[3];
-        correo.value=$ver[4];*/
-        <?php endwhile; ?>
-        }  
-</script>
 <?php include 'AlmacenIncludesPHP/elementosPhp/HTMLSTRUCTURE/parteInferior.php' ?>
-</body>

@@ -1,3 +1,43 @@
+<?php
+include_once 'includes/empresa.php';
+include_once 'includes/emp_session.php';
+include 'includes/Conexion.php';
+
+$empSession = new EmpSession();
+$emp = new Emp();
+
+if(isset($_SESSION['user'])){
+    $emp->setEmp($empSession->getCurrentEmp());
+    $dato=$emp->getEmpCorreo();
+    $c=new conectar();
+    $conexion=$c->conexion();
+
+    $sql="SELECT *from Empresa where DireccionWeb='$dato'";
+    $result=mysqli_query($conexion,$sql);
+    
+/*
+    $datos=array(
+                    'IDEmpresa'=>$ver[0],
+                    'Nombre'=>$ver[1],
+                    'RazonSocial'=>$ver[2],
+                    'Email'=> $ver[3],
+                    'Contra'=>$ver[4],
+                    'Direccion'=>$ver[5],
+                    'Tipo'=>$ver[6],
+                    'Telefono'=>$ver[7],
+                    'DireccionWeb'=>$ver[8],
+                    'FacebookEmpresa'=>$ver[9],
+                    'SkypeEmpresa'=>$ver[10],
+                    'TwitterEmpresa'=>$ver[11],
+                    'FotoLogo'=>$ver[12],
+                );
+
+    return $datos;*/
+    include_once 'editarPerfilEmpresa.php';
+}else{
+    include_once 'loginEmpresa.php';
+}
+?>
 <?php include 'AlmacenIncludesPHP/elementosPhp/HTMLSTRUCTURE/parteSuperior.php' ?>
 
 <?php include 'AlmacenIncludesPHP/elementosPhp/navbarRetorno/navbarInicialRetornoSuperior.php' ?>
@@ -60,13 +100,12 @@ index_emp.php
         <p class="white-text textCardInicioSamll centerElements">Datos editables de la empresa.</p>
     </div>
     <div class="sizeCardForm backgroundCardForm borderCardInicio z-depth-3">
-        <form class="col s12" method="post" action="validarPrimParteRegistroEmpresa.php">
+        <form class="col s12">
+        <?php while($datos=mysqli_fetch_row($result)): ?>
             <div class="row">
                 <div class="input-field col s12">
                     <input placeholder="Escriba el nombre de la empresa." id="nombre_empresa" name="nombre_empresa"  type="text"
-                    value="<?php 
-                     echo  htmlspecialchars ($nombreEmpresa)
-                    ?>"  class="validate white-text">
+                    value="<?php echo $datos[1] ?>"  class="validate white-text">
                     <label for="nombre_empresa">Nombre empresa.</label>
                     <?php
                        if(isset($NombreEmpresa_error)){
@@ -75,9 +114,7 @@ index_emp.php
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba la razon social de la empresa." id="razon_Social" name="razon_Social" type="text"
-                    value="<?php 
-                     echo  htmlspecialchars ($razonSocialEmpresa)
-                    ?>" class="validate white-text">
+                    value="<?php echo $datos[2] ?>" class="validate white-text">
                     <label for="first_name">Razón social de la empresa.</label>
                     <?php
                        if(isset($razonSocialEmpresa_error)){
@@ -86,9 +123,7 @@ index_emp.php
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Email del admin de empresa." id="email_empresa" name="email_empresa" type="email" 
-                    value="<?php 
-                     echo  htmlspecialchars ($emailEmpresa)
-                    ?>" 
+                    value="<?php echo $datos[3] ?>" 
                     class="validate white-text">
                     <label for="first_name">Email.</label>
                     <?php
@@ -98,9 +133,7 @@ index_emp.php
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba su password." id="password_empresa" name="password_empresa" type="password"
-                    value="<?php 
-                     echo  htmlspecialchars ($passwordEmpresa)
-                    ?>" class="validate white-text">
+                    value="<?php echo $datos[4] ?>" class="validate white-text">
                     <label for="password">Password.</label>
                     <?php
                        if(isset($passwordEmpresa_error)){
@@ -108,9 +141,7 @@ index_emp.php
                       } ?>
                 </div>
                 <div class="input-field col s12">
-                    <textarea placeholder="Escriba la dirección" id="direccion_empresa" name="direccion_empresa" class="materialize-textarea white-text" data-length="200"><?php 
-                     echo  htmlspecialchars ($direccionEmpresa)
-                    ?></textarea>
+                    <textarea placeholder="Escriba la dirección" id="direccion_empresa" name="direccion_empresa" class="materialize-textarea white-text" data-length="200"><?php echo $datos[5] ?></textarea>
                     <label for="direccion_sede">Direccion principal de la empresa.</label>
                     <?php
                        if(isset($direccionEmpresa_error)){
@@ -266,9 +297,7 @@ index_emp.php
                 <!--Telefono y redes sociales.-->
                 <div class="input-field col s12">
                     <input placeholder="Escriba el telefono de la empresa." id="telefono_empresa" name="telefono_empresa" type="tel"
-                    value="<?php
-                            echo  htmlspecialchars ($telEmpresa)
-                        ?>"
+                    value="<?php echo $datos[6] ?>"
                      class="validate white-text">
                     <label for="telefono">Tel&eacute;fono.</label>
                     <?php 
@@ -278,28 +307,23 @@ index_emp.php
                 </div> 
                 <div class="input-field col s12">
                     <input placeholder="Escriba la red social" id="facebook_empresa" name="facebook_empresa" type="text" 
-                    value="<?php
-                            echo  htmlspecialchars ($facebookEmpresa)
-                        ?>"class="validate white-text">
+                    value="<?php echo $datos[9] ?>"class="validate white-text">
                     <label for="facebook">(Opcional) Facebook.</label>
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba la red social" id="skype_empresa" name="skype_empresa" type="text" 
-                    value="<?php
-                            echo  htmlspecialchars ($skypeEmpresa)
-                        ?>"
+                    value="<?php echo $datos[10] ?>"
                     class="validate white-text">
                     <label for="skype">(Opcional) Skype.</label>
                 </div>
                 <div class="input-field col s12">
                     <input placeholder="Escriba la red social" id="twitter_empresa" name="twitter_empresa" type="text"
-                    value="<?php
-                            echo  htmlspecialchars ($twitterEmpresa)
-                        ?>" class="validate white-text">
+                    value="<?php echo $datos[11] ?>" class="validate white-text">
                     <label for="twitter">(Opcional) Twitter.</label>
                 </div>
     </div>
     <a ><button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Siguiente.</button></a>
+    <?php endwhile; ?>
     </form>
 </div>
 

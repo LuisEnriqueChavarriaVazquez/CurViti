@@ -7,7 +7,7 @@ class Emp extends DB{
 
 
     public function empExists($user, $pass){
-        $query = $this->connect()->prepare('SELECT * FROM empresa WHERE Email = :user AND Contra = :pass');
+        $query = $this->connect()->prepare('SELECT * FROM Empresa WHERE DireccionWeb = :user AND Contra = :pass');
         $query->execute(['user' => $user, 'pass' => $pass]);
 
         if($query->rowCount()){
@@ -18,17 +18,20 @@ class Emp extends DB{
     }
 
     public function setEmp($user){
-        $query = $this->connect()->prepare('SELECT * FROM empresa WHERE Email = :user');
+        $query = $this->connect()->prepare('SELECT * FROM Empresa WHERE DireccionWeb = :user');
         $query->execute(['user' => $user]);
         
         foreach ($query as $currentEmp) {
             $this->nombre = $currentEmp['Nombre'];
-            $this->username = $currentEmp['Email'];
+            $this->username = $currentEmp['DireccionWeb'];
         }
     }
 
     public function getEmp(){
         return $this->nombre;
+    }
+    public function getEmpCorreo(){
+        return $this->username;
     }
 }
 
