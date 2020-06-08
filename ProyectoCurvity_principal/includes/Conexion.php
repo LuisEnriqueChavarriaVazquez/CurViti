@@ -4,7 +4,7 @@
 		private $servidor="localhost";
 		private $usuario="root";
 		private $password="";
-		private $bd="curvity";
+		private $bd="u253306330_curvity";
 
 		public function conexion(){
 			$conexion=mysqli_connect($this->servidor,

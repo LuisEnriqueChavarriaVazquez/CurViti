@@ -1,4 +1,6 @@
 <?php 
+  require("claseDB.php");
+  
   class Aspirante {
       
     public $nombre;
@@ -21,7 +23,7 @@
     public $twitterNombre;
     public $skypeNombre;
 
-    function __construct($nombreEntrada,$passwordEntrada,$apellidoPaternoEntrada,$apellidoMaternoEntrada,$fechaNacEntrada,$resumenExperienciasLaboralesEntrada,$sueldoEntrada,$direccionEntrada,$nivelAcademicoEntrada,$escuelaEntrada,$resumenHabEntrada,$correoEntrada,$telefonoEntrada,$numeroIdiomasEntrada,$detallesIdiomasEntrada) {
+    function __construct($nombreEntrada,$passwordEntrada,$apellidoPaternoEntrada,$apellidoMaternoEntrada,$fechaNacEntrada,$resumenExperienciasLaboralesEntrada,$sueldoEntrada,$direccionEntrada,$nivelAcademicoEntrada,$escuelaEntrada,$resumenHabEntrada,$correoEntrada,$numeroIdiomasEntrada,$detallesIdiomasEntrada) {
        $this->nombre=$nombreEntrada;
        $this->password=$passwordEntrada;
        $this->apellidoPaterno=$apellidoPaternoEntrada;
@@ -34,7 +36,7 @@
        $this->escuela=$escuelaEntrada;
        $this->resumenHabilidades=$resumenHabEntrada;
        $this->correoElectronico=$correoEntrada;
-       $this->telefono=$telefonoEntrada;
+       //$this->telefono=$telefonoEntrada;
        $this->numeroIdiomas=$numeroIdiomasEntrada;
        $this->detallesIdiomas=$detallesIdiomasEntrada;
       

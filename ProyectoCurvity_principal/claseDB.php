@@ -2,20 +2,21 @@
 class objetoConexionBaseDatos {
     public $nombreServer="localhost";
     public $nombreUsuario="root";
-    public $passwordDB="ramv1357";
-    public $nombreDB="Curvity";
+    public $passwordDB="";
+    public $nombreDB="u253306330_curvity";
     public $conector=null;
      
-    public function __construct(){
+    /*public function __construct(){
          try{
             $this->conector = new mysqli($this->nombreServer,$this->nombreUsuario,$this->passwordDB,$this->nombreDB);
             return true;
          }catch(Exception $e){
             return false;
          }
-    }
+    }*/
 
     public function comprobarConexion(){
+      $this->conector = new mysqli($this->nombreServer,$this->nombreUsuario,$this->passwordDB,$this->nombreDB);
         $conexionResutado=false;
         if($this->conector->connect_error) {
          $conexionResutado=false;
@@ -75,10 +76,32 @@ class objetoConexionBaseDatos {
    }
 
    public function elementoRepetido($NombreTabla,$NombreAtributo,$NombreElemento){
-      $sqlSentence="select * from ".$NombreTabla. " where ".$NombreAtributo."=".$NombreElemento;
-      $result = $conn->query($sql);
+      $sqlSentence="select * from ".$NombreTabla." where ".$NombreAtributo."=".$NombreElemento;
+      $result = $this->conector->query($sqlSentence);
       if ($result->num_rows > 0) {
          return true;
+      }else{
+         return false;
+      }
+   }
+   
+   public function comprobarExistenciaElementoAtibuto($NombreTabla,$NombreAtributo,$NombreElemento){
+      $sqlSentence="select * from ".$NombreTabla." where ".$NombreAtributo."='".$NombreElemento."'";
+      $result = $this->conector->query($sqlSentence);
+      if ($result->num_rows > 0) {
+         return true;
+      }else{
+         return false;
+      }
+   }
+
+   public function retornarElementoInteres($NombreTabla,$NombreAtributoBusqueda,$NombreElemento,$NombreAtributoRetorno){
+      $sqlSentence="select * from ".$NombreTabla." where ".$NombreAtributoBusqueda."='".$NombreElemento."'";
+      $result = $this->conector->query($sqlSentence);
+      if ($result->num_rows > 0) {
+         while($row = $result->fetch_assoc()) {
+            return $row[$NombreAtributoRetorno];
+          }
       }else{
          return false;
       }

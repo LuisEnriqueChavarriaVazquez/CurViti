@@ -14,30 +14,13 @@ if(isset($_SESSION['user'])){
 
     $sql="SELECT *from Aspirante where CorreoElec='$dato'";
     $result=mysqli_query($conexion,$sql);
+    /*while ($rowfoto = $resultFoto->fetch_assoc()) {
+        "<section class='containerPicture' id='logo-container'>
+        <img class='imgFormater' src='data:image/jpeg; base64," . base64_encode($rowfoto['FotoLogo']) . "'>
+        </section>";
+        
+    }*/
     
-/*
-    $datos=array(
-                    'IDAspirante'=>$ver[0],
-                    'Nombre'=>$ver[1],
-                    'Contra'=>$ver[2],
-                    'ApellidoPat'=> $ver[3],
-                    'ApellidoMat'=>$ver[4],
-                    'SueldoDeseado'=>$ver[5],
-                    'Direccion'=>$ver[6],
-                    'Escuela'=>$ver[7],
-                    'NivelAcademico'=>$ver[8],
-                    'CorreoElec'=>$ver[9],
-                    'ResumenExpPrevLab'=>$ver[10],
-                    'ResumenHab'=>$ver[11],
-                    'numeroIdiomas'=>$ver[12],
-                    'detallesIdiomas'=>$ver[13],
-                    'FacebookAspirante'=>$ver[14],
-                    'SkypeAspirante'=>$ver[15],
-                    'TwitterAspirante'=>$ver[16],
-                    'FotoPerfil'=>$ver[17]
-                );
-
-    return $datos;*/
     include_once 'editarPerfilAspirante.php';
 }else{
     include_once 'loginAspirante.php';
@@ -132,7 +115,7 @@ index_asp.php
         <p class="white-text textCardInicioSamll centerElements">Datos editables.</p>
     </div>
     <div class="sizeCardForm backgroundCardForm borderCardInicio z-depth-3">
-        <form class="col s12" method="post" action="validarUpdateAspirante.php">
+        <form class="col s12" method="post" action="validarUpdateAspirante.php" enctype='multipart/form-data'>
         <?php while($datos=mysqli_fetch_row($result)): ?>
                 <div class="input-field col s12"> 
                     <input placeholder="Escriba su nombre." id="nombre_aspirante" name="nombre_aspirante" 
@@ -180,20 +163,6 @@ index_asp.php
                     <?php
                         if(isset($password_error)){
                             echo "<p class='white-text'>".$password_error."</p>";
-                        }
-                    ?>
-                </div>
-
-                <div class="input-field col s12">
-                    <input type="text" placeholder="Seleccione su fecha de nacimiento." id="fecha_nac" name="fecha_nac" 
-                    value="<?php 
-                        echo  htmlspecialchars ($fechaNacAs)
-                    ?>" 
-                    class="validate datepicker white-text">
-                    <label for="fecha_nac">Fecha de nacimiento.</label>
-                    <?php
-                        if(isset($fecha_error)){
-                            echo "<p class='white-text'>".$fecha_error."</p>";
                         }
                     ?>
                 </div>
@@ -283,11 +252,11 @@ index_asp.php
                     <label for="twitter_aspirante">(Opcional) Twitter.</label>
                 </div>
 
-                <!--Foto de perfil-->
+                         <!--Foto de perfil-->
                 <div class="file-field input-field">
                     <div class="btn white blue-text text-darken-4">
                         <span>Foto de perfil</span>
-                        <input type="file" id="archivo_aspirante" name="archivo_aspirante">
+                        <input type="file" id="archivo_aspirante" name="archivo_aspirante" />
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" id="archivoDir_aspirante" name="archivoDir_aspirante" 
@@ -358,6 +327,5 @@ index_asp.php
             <button type="submit" class="waves-effect btn-large borderButton sizeButton textButton grey lighten-5 blue-text text-darken-4">Guardar cambios.</button>
         </form>
     </div>
-    
 </div>
 <?php include 'AlmacenIncludesPHP/elementosPhp/HTMLSTRUCTURE/parteInferior.php' ?>
